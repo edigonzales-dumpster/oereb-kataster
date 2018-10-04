@@ -1,0 +1,217 @@
+buildscript {
+    repositories {
+        mavenLocal()      
+        maven {
+            url "http://jars.interlis.ch"
+        }
+        maven {
+            url "http://download.osgeo.org/webdav/geotools/"
+        }
+        mavenCentral()
+        jcenter()
+    }
+}
+
+plugins {
+    id "ch.so.agi.gretl" version "1.0.5-SNAPSHOT" 
+}
+
+import ch.so.agi.gretl.tasks.*
+import ch.so.agi.gretl.api.TransferSet
+
+ext {
+    dbUriOereb = "jdbc:postgresql://192.168.50.8:5432/oereb"
+    dbUserOereb = "ddluser"
+    dbPwdOereb = "ddluser"
+    dbSchemaOereb = "agi_oereb"
+    dbSchemaOerebNutzungsplanung = "agi_oereb_npl"
+    dbSchemaNutzungsplanung = "arp_npl"
+}
+
+def GROUP_DB_INIT = "Initialisierung"
+
+task createSchemaOereb(type: Ili2pgImportSchema) {
+    description = "Erstellt das OEREB-Produktions-Datenbankschema (Transferstruktur)."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "OeREBKRMtrsfr_V1_1"
+    dbschema = dbSchemaOereb
+    nameByTopic = true
+    createFk = false
+    createFkIdx = true
+    createUnique = false
+    createNumChecks = false
+    createEnumTabs = true
+    createBasketCol = true
+    createDatasetCol = true
+    strokeArcs = true
+    disableValidation = true
+}
+
+task importFederalCodesets(type: Ili2pgImport) {
+    description = "Importiert OeREBKRM_V1_1_Codelisten_20170101.xml."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "OeREBKRMvs_V1_1"
+    dbschema = dbSchemaOereb
+    dataFile = "../../data/ch.admin/OeREBKRM_V1_1_Codelisten_20170101.xml"
+    dataset = "ch.admin.code_sets"
+    disableValidation = true
+}
+
+task importFederalLegalBasis(type: Ili2pgImport) {
+    description = "Importiert OeREBKRM_V1_1_Gesetze_20180501.xml."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "OeREBKRMvs_V1_1"
+    dbschema = dbSchemaOereb
+    dataFile = "../../data/ch.admin/OeREBKRM_V1_1_Gesetze_20180501.xml"
+    dataset = "ch.admin.legal_basis"
+    disableValidation = true
+}
+
+task importFederal_ch_bav_kataster_belasteter_standorte_oev(type: Ili2pgImport) {
+    description = "Importiert ch.bav.kataster-belasteter-standorte-oev.oereb_20181001.xtf."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "OeREBKRMtrsfr_V1_1"
+    dbschema = dbSchemaOereb
+    dataFile = "../../data/ch.admin/ch.bav.kataster-belasteter-standorte-oev.oereb_20181001.xtf"
+    dataset = "ch.bav.kataster-belasteter-standorte-oev"
+    disableValidation = true
+}
+
+task importFederal_ch_bazl_kataster_belasteter_standorte_zivilflugplaetze(type: Ili2pgImport) {
+    description = "Importiert ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb_20181002.xtf."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "OeREBKRMtrsfr_V1_1"
+    dbschema = dbSchemaOereb
+    dataFile = "../../data/ch.admin/ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb_20181002.xtf"
+    dataset = "ch.bazl.kataster-belasteter-standorte-zivilflugplaetze"
+    disableValidation = true
+}
+
+task importFederal_ch_bazl_projektierungszonen_flughafenanlagen(type: Ili2pgImport) {
+    description = "Importiert ch.bazl.projektierungszonen-flughafenanlagen.oereb_20161128.xtf."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "OeREBKRMtrsfr_V1_1"
+    dbschema = dbSchemaOereb
+    dataFile = "../../data/ch.admin/ch.bazl.projektierungszonen-flughafenanlagen.oereb_20161128.xtf"
+    dataset = "ch.bazl.projektierungszonen-flughafenanlagen"
+    disableValidation = true
+}
+
+task importFederal_ch_bazl_sicherheitszonenplan(type: Ili2pgImport) {
+    description = "Importiert ch.bazl.sicherheitszonenplan.oereb_20180903.xtf."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "OeREBKRMtrsfr_V1_1"
+    dbschema = dbSchemaOereb
+    dataFile = "../../data/ch.admin/ch.bazl.sicherheitszonenplan.oereb_20180903.xtf"
+    dataset = "ch.bazl.sicherheitszonenplan"
+    disableValidation = true
+}
+
+task createSchemaOerebNutzungsplanung(type: Ili2pgImportSchema) {
+    description = "Erstellt das OEREB-Nutzungsplanungs-Datenbankschema (Transferstruktur) für Staging."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "OeREBKRMtrsfr_V1_1"
+    dbschema = dbSchemaOerebNutzungsplanung
+    nameByTopic = true
+    createFk = false
+    createFkIdx = true
+    createUnique = false
+    createNumChecks = false
+    createEnumTabs = true
+    createBasketCol = false
+    createDatasetCol = false
+    strokeArcs = true
+    disableValidation = true
+}
+
+task createSchemaNutzungsplanung(type: Ili2pgImportSchema) {
+    description = "Erstellt das Nutzungsplanungs-Datenbankschema (Kantonsmodell)."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "SO_Nutzungsplanung_20171118"
+    dbschema = dbSchemaNutzungsplanung
+    nameByTopic = true
+    createFk = false
+    createFkIdx = true
+    createUnique = false
+    createNumChecks = false
+    createEnumTabs = true
+    createBasketCol = true
+    createDatasetCol = true
+    strokeArcs = true
+    disableValidation = true
+}
+
+task importCanton_NPL_2580(type: Ili2pgReplace) {
+    description = "Importiert 2580_2018-02-13.xtf."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "SO_Nutzungsplanung_20171118"
+    dbschema = dbSchemaNutzungsplanung
+    dataFile = "../../data/ch.so.arp/2580_2018-02-13.xtf"
+    dataset = "2580"
+    disableValidation = true
+}
+
+task importCanton_NPL_2457(type: Ili2pgReplace) {
+    description = "Importiert 2457_2018-09-06.xtf."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "SO_Nutzungsplanung_20171118"
+    dbschema = dbSchemaNutzungsplanung
+    dataFile = "../../data/ch.so.arp/2457_2018-09-06.xtf"
+    dataset = "2457"
+    disableValidation = true
+}
+
+task importCanton_NPL_2498(type: Ili2pgReplace) {
+    description = "Importiert 2498_2018-09-10.xtf."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "SO_Nutzungsplanung_20171118"
+    dbschema = dbSchemaNutzungsplanung
+    dataFile = "../../data/ch.so.arp/2498_2018-09-10.xtf"
+    dataset = "2498"
+    disableValidation = true
+}
+
+task importCanton_NPL_2502(type: Ili2pgReplace) {
+    description = "Importiert 2502_2017-12-13.xtf."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "SO_Nutzungsplanung_20171118"
+    dbschema = dbSchemaNutzungsplanung
+    dataFile = "../../data/ch.so.arp/2502_2017-12-13.xtf"
+    dataset = "2502"
+    disableValidation = true
+}
+
+task importCanton_NPL_2614(type: Ili2pgReplace) {
+    description = "Importiert 2614_2018-09-11_korrigiert.xtf."
+    group = GROUP_DB_INIT
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = "SO_Nutzungsplanung_20171118"
+    dbschema = dbSchemaNutzungsplanung
+    dataFile = "../../data/ch.so.arp/2614_2018-09-11_korrigiert.xtf"
+    dataset = "2614"
+    disableValidation = true
+}
+
+// -> mit forschleife (siehe Fixpunktkonzept).
+// nur noch bfsnr als Filename.
+// init dbs und data import trennen als Gruppe.
+
+task delete(type: SqlExecutor) {
+    description = "Dumme SQL-Query zum Testen der Oracle-DB."
+    
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    sqlFiles = ["sql/oracle-dummy.sql"]
+}
