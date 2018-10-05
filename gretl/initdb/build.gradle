@@ -60,8 +60,8 @@ task createSchemaOerebNutzungsplanung(type: Ili2pgImportSchema) {
     createUnique = false
     createNumChecks = false
     createEnumTabs = true
-    createBasketCol = false
-    createDatasetCol = false
+    createBasketCol = true
+    createDatasetCol = true
     strokeArcs = true
     defaultSrsCode = 2056
     disableValidation = true
@@ -74,6 +74,7 @@ task importCantonalLegalBasis(type: Ili2pgImport) {
     models = iliModelVorschriften
     dbschema = dbSchemaOerebNutzungsplanung
     dataFile = "../../data/ch.so.sk/ch.so.sk.gesetze.oereb.xml"
+    dataset = "ch.so.sk.legal_basis"
     disableValidation = true
 }
 
