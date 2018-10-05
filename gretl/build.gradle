@@ -1,0 +1,33 @@
+allprojects{
+    buildscript {
+        repositories {
+            mavenLocal()      
+            maven {
+                url "http://jars.interlis.ch"
+            }
+            maven {
+                url "http://download.osgeo.org/webdav/geotools/"
+            }
+            mavenCentral()
+            jcenter()
+        }
+    }
+    ext {
+        dbUriOereb = "jdbc:postgresql://192.168.50.8:5432/oereb"
+        dbUserOereb = "ddluser"
+        dbPwdOereb = "ddluser"
+
+        dbSchemaOereb = "agi_oereb"
+        dbSchemaOerebNutzungsplanung = "agi_oereb_npl"
+        dbSchemaNutzungsplanung = "arp_npl"
+
+        iliModelBasis = 'OeREBKRM_V1_1'
+        iliModelVorschriften = 'OeREBKRMvs_V1_1'
+        iliModelTransferstruktur = 'OeREBKRMtrsfr_V1_1'
+        iliModelNutzungsplanung = 'SO_Nutzungsplanung_20171118'
+
+        xtfOerebLandUsePlanFileName = "ch.so.arp.nutzungsplanung.oereb.xtf"
+    }
+}
+
+

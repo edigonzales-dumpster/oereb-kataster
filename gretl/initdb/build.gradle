@@ -1,0 +1,98 @@
+plugins {
+    id "ch.so.agi.gretl" version "1.0.5-SNAPSHOT"
+}
+
+import ch.so.agi.gretl.tasks.*
+import ch.so.agi.gretl.api.TransferSet
+
+def GROUP_INIT_DB = "Initialisierung Datenbank"
+
+task createSchemaOereb(type: Ili2pgImportSchema) {
+    description = "Erstellt das OEREB-Produktions-Datenbankschema (Transferstruktur)."
+    group = GROUP_INIT_DB
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelTransferstruktur
+    dbschema = dbSchemaOereb
+    nameByTopic = true
+    createFk = false
+    createFkIdx = true
+    createUnique = false
+    createNumChecks = false
+    createEnumTabs = true
+    createBasketCol = true
+    createDatasetCol = true
+    strokeArcs = true
+    defaultSrsCode = 2056
+    disableValidation = true
+}
+
+task importFederalCodesets(type: Ili2pgImport) {
+    description = "Importiert OeREBKRM_V1_1_Codelisten_20170101.xml."
+    group = GROUP_INIT_DB
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelBasis
+    dbschema = dbSchemaOereb
+    dataFile = "../../data/ch.admin/OeREBKRM_V1_1_Codelisten_20170101.xml"
+    dataset = "ch.admin.code_sets"
+    disableValidation = true
+}
+
+task importFederalLegalBasis(type: Ili2pgImport) {
+    description = "Importiert OeREBKRM_V1_1_Gesetze_20180501.xml."
+    group = GROUP_INIT_DB
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelVorschriften
+    dbschema = dbSchemaOereb
+    dataFile = "../../data/ch.admin/OeREBKRM_V1_1_Gesetze_20180501.xml"
+    dataset = "ch.admin.legal_basis"
+    disableValidation = true
+}
+
+task createSchemaOerebNutzungsplanung(type: Ili2pgImportSchema) {
+    description = "Erstellt für die Nutzungsplanung ein OEREB-Datenbankschema (Transferstruktur). Wird für das Staging verwendet."
+    group = GROUP_INIT_DB
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelTransferstruktur
+    dbschema = dbSchemaOerebNutzungsplanung
+    nameByTopic = true
+    createFk = false
+    createFkIdx = true
+    createUnique = false
+    createNumChecks = false
+    createEnumTabs = true
+    createBasketCol = false
+    createDatasetCol = false
+    strokeArcs = true
+    defaultSrsCode = 2056
+    disableValidation = true
+}
+
+task importCantonalLegalBasis(type: Ili2pgImport) {
+    description = "Importiert ch.so.sk.gesetze.oereb.xml."
+    group = GROUP_INIT_DB
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelVorschriften
+    dbschema = dbSchemaOerebNutzungsplanung
+    dataFile = "../../data/ch.so.sk/ch.so.sk.gesetze.oereb.xml"
+    disableValidation = true
+}
+
+task createSchemaNutzungsplanung(type: Ili2pgImportSchema) {
+    description = "Erstellt das Nutzungsplanungs-Datenbankschema (Kantonsmodell)."
+    group = GROUP_INIT_DB
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelNutzungsplanung
+    dbschema = dbSchemaNutzungsplanung
+    nameByTopic = true
+    createFk = false
+    createFkIdx = true
+    createUnique = false
+    createNumChecks = false
+    createEnumTabs = true
+    createBasketCol = true
+    createDatasetCol = true
+    strokeArcs = true
+    defaultSrsCode = 2056
+    disableValidation = true
+}
+

@@ -1,0 +1,190 @@
+plugins {
+    id "ch.so.agi.gretl" version "1.0.5-SNAPSHOT"
+    id "de.undercouch.download" version "3.4.3"
+}
+
+import ch.so.agi.gretl.tasks.*
+import ch.so.agi.gretl.api.TransferSet
+import java.nio.file.Paths
+
+// Download-Verzeichnis
+def pathToTempFolder = System.getProperty("java.io.tmpdir")
+def pathToUnzipFolder = Paths.get(pathToTempFolder, 'unzip_data')
+
+// Bundes-OEREB-Datensätze
+def federalDataSets = ["ch.bav.kataster-belasteter-standorte-oev.oereb","ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb","ch.bazl.projektierungszonen-flughafenanlagen.oereb","ch.bazl.sicherheitszonenplan.oereb"]
+def federalBaseUrl = "https://data.geo.admin.ch/"
+def federalDataSetZipFileName = "/data.zip"
+def pathToFederalDataSetZip = Paths.get(pathToTempFolder, "data.zip")
+
+// Nutzungsplanungsdatensätze im kantonalen Modell
+def cantonalLandUsePlansDataSets = ["2457","2498","2502","2580","2614"]
+def cantonalLandUsePlansBaseUrl = "https://s3.eu-central-1.amazonaws.com/ch.so.arp.nutzungsplanung/"
+
+def GROUP_DATA_IMPORT = "Datenimport"
+
+// Herunterladen der Bundes-OEREB-Datensätze
+federalDataSets.each { federalDataSet ->
+    def dataSet = federalDataSet.toString()
+    task "downloadFederalData_$dataSet"(type: Download) {
+        group = GROUP_DATA_IMPORT
+        src federalBaseUrl + dataSet + federalDataSetZipFileName
+        dest pathToTempFolder
+        overwrite true
+
+        doLast {
+            println "File downloaded to: " + pathToTempFolder
+        }        
+    }
+}
+
+task downloadFederalData() {
+    description = "Aggregationstask für Herunterladen sämtlicher Bundes-OEREB-Daten."
+    group = GROUP_DATA_IMPORT
+    doLast {
+        println "All dynamic tasks were performed."
+    }
+}
+
+downloadFederalData.dependsOn {
+    tasks.findAll { task -> task.name.startsWith('downloadFederalData_') }
+}
+
+// Unzippen der Bundes-OEREB-Datensätze
+federalDataSets.each { federalDataSet ->
+    def dataSet = federalDataSet.toString()
+    task "unzipFederalData_$dataSet"(type: Copy, dependsOn: "downloadFederalData_$dataSet") {
+        group = GROUP_DATA_IMPORT
+        from zipTree(pathToFederalDataSetZip)
+        into file(pathToUnzipFolder)
+        include "**/*.xtf"
+        rename { String fileName ->
+            if (fileName.contains(dataSet)) {
+                return dataSet+".xtf"
+            }
+            return fileName
+        } 
+
+        doLast {
+            println "File unzipped to directory: " + pathToUnzipFolder
+        }        
+    }
+}
+
+task unzipFederalData() {
+    description = "Aggregationstask für Unzippen sämtlicher Bundes-OEREB-Daten."
+    group = GROUP_DATA_IMPORT
+    doLast {
+        println "All dynamic tasks were performed."
+    }
+}
+
+unzipFederalData.dependsOn {
+    tasks.findAll { task -> task.name.startsWith('unzipFederalData_') }
+}
+
+// Importieren der Bundes-OEREB-Datensätze
+federalDataSets.each { federalDataSet ->
+    def dataSet = federalDataSet.toString()
+    task "replaceFederalData_$dataSet"(type: Ili2pgReplace, dependsOn: "unzipFederalData_$dataSet") {
+        group = GROUP_DATA_IMPORT
+        database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+        models = iliModelTransferstruktur
+        dbschema = dbSchemaOereb
+        dataFile = file(Paths.get(pathToUnzipFolder.toString(), dataSet + ".xtf"))
+        dataset = dataSet
+        disableValidation = true
+    }
+}
+
+task replaceFederalData() {
+    description = "Aggregationstask für Importieren/Ersetzen sämtlicher Bundes-OEREB-Daten in der OEREB-Datenbank."
+    group = GROUP_DATA_IMPORT
+    doLast {
+        println "All dynamic tasks were performed."
+    }
+}
+
+replaceFederalData.dependsOn {
+    tasks.findAll { task -> task.name.startsWith('replaceFederalData_') }
+}
+
+// Herunterladen der kantonalen Nutzungsplanungsdatensätze
+cantonalLandUsePlansDataSets.each { cantonalLandUsePlansDataSet ->
+    def dataSet = cantonalLandUsePlansDataSet.toString()
+    task "downloadCantonalLandUsePlansData_$dataSet"(type: Download) {
+        group = GROUP_DATA_IMPORT
+        src cantonalLandUsePlansBaseUrl + dataSet + ".zip"
+        dest pathToTempFolder
+        overwrite true
+
+        doLast {
+            println "File downloaded to: " + pathToTempFolder
+        }        
+    }
+}
+
+task downloadCantonalLandUsePlansData() {
+    description = "Aggregationstask für Herunterladen sämtlicher Nutzungsplanungsdatensätze (im kantonalen Modell)."
+    group = GROUP_DATA_IMPORT
+    doLast {
+        println "All dynamic tasks were performed."
+    }
+}
+
+downloadCantonalLandUsePlansData.dependsOn {
+    tasks.findAll { task -> task.name.startsWith('downloadCantonalLandUsePlansData_') }
+}
+
+// Unzippen der kantonalen Nutzungsplanungsdatensätze
+cantonalLandUsePlansDataSets.each { cantonalLandUsePlansDataSet ->
+    def dataSet = cantonalLandUsePlansDataSet.toString()
+    task "unzipCantonalLandUsePlansData_$dataSet"(type: Copy, dependsOn: "downloadCantonalLandUsePlansData_$dataSet") {
+        group = GROUP_DATA_IMPORT
+        from zipTree(Paths.get(pathToTempFolder, dataSet+".zip"))
+        into file(pathToUnzipFolder)
+        include "**/*.xtf"
+
+        doLast {
+            println "File unzipped to directory: " + pathToUnzipFolder
+        }        
+    }
+}
+
+task unzipCantonalLandUsePlansData() {
+    description = "Aggregationstask für Unzippen sämtlicher Nutzungsplanungsdatensätze (im kantonalen Modell)."
+    group = GROUP_DATA_IMPORT
+    doLast {
+        println "All dynamic tasks were performed."
+    }
+}
+
+unzipCantonalLandUsePlansData.dependsOn {
+    tasks.findAll { task -> task.name.startsWith('unzipCantonalLandUsePlansData_') }
+}
+
+// Importieren der kantonalen Nutzungsplanungsdatensätze
+cantonalLandUsePlansDataSets.each { cantonalLandUsePlansDataSet ->
+    def dataSet = cantonalLandUsePlansDataSet.toString()
+    task "replaceCantonalLandUsePlansData_$dataSet"(type: Ili2pgReplace, dependsOn: "unzipCantonalLandUsePlansData_$dataSet") {
+        group = GROUP_DATA_IMPORT
+        database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+        models = iliModelNutzungsplanung
+        dbschema = dbSchemaNutzungsplanung
+        dataFile = file(Paths.get(pathToUnzipFolder.toString(), dataSet + ".xtf"))
+        dataset = dataSet
+        disableValidation = true
+    }
+}
+
+task replaceCantonalLandUsePlansData() {
+    description = "Aggregationstask für Importieren/Ersetzen sämtlicher Nutzungsplanungsdatensätze (im kantonalen Modell)."
+    group = GROUP_DATA_IMPORT
+    doLast {
+        println "All dynamic tasks were performed."
+    }
+}
+
+replaceCantonalLandUsePlansData.dependsOn {
+    tasks.findAll { task -> task.name.startsWith('replaceCantonalLandUsePlansData_') }
+}
