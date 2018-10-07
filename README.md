@@ -44,3 +44,4 @@ Exportiert die Nutzungsplanungsdaten in die Transferstruktur (nur Nutzungsplanun
 **TODO:** 
 - Wann verweist etwas auf die gesetzliche Grundlage? Wann auf PBG, wann auf KBV?
 - Symbole? GeoScript-Groovy und SLD?
+- ArtCode: 40 Zeichen gemäss Modell. Reicht nicht für unsere Aufzähltypen -> Nur die ersten vier Zeichen NXXX?
