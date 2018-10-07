@@ -67,7 +67,7 @@ task createSchemaOerebNutzungsplanung(type: Ili2pgImportSchema) {
     disableValidation = true
 }
 
-task importCantonalLegalBasis(type: Ili2pgImport) {
+task importCantonalLegalBasisToOerebNutzungsplanung(type: Ili2pgImport) {
     description = "Importiert ch.so.sk.gesetze.oereb.xml."
     group = GROUP_INIT_DB
     database = [dbUriOereb, dbUserOereb, dbPwdOereb]
@@ -75,6 +75,17 @@ task importCantonalLegalBasis(type: Ili2pgImport) {
     dbschema = dbSchemaOerebNutzungsplanung
     dataFile = "../../data/ch.so.sk/ch.so.sk.gesetze.oereb.xml"
     dataset = "ch.so.sk.legal_basis"
+    disableValidation = true
+}
+
+task importFederalLegalBasisToOerebNutzungsplanung(type: Ili2pgImport) {
+    description = "Importiert OeREBKRM_V1_1_Gesetze_20180501.xml."
+    group = GROUP_INIT_DB
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelVorschriften
+    dbschema = dbSchemaOerebNutzungsplanung
+    dataFile = "../../data/ch.admin/OeREBKRM_V1_1_Gesetze_20180501.xml"
+    dataset = "ch.admin.legal_basis"
     disableValidation = true
 }
 

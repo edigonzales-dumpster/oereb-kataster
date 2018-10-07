@@ -18,7 +18,7 @@ allprojects{
         dbPwdOereb = "ddluser"
 
         dbSchemaOereb = "agi_oereb"
-        dbSchemaOerebNutzungsplanung = "agi_oereb_npl"
+        dbSchemaOerebNutzungsplanung = "arp_npl_oereb"
         dbSchemaNutzungsplanung = "arp_npl"
 
         iliModelBasis = 'OeREBKRM_V1_1'

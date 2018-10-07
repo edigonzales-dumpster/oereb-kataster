@@ -19,11 +19,15 @@ task deleteStaging(type: SqlExecutor) {
     sqlFiles = ["delete_oereb_npl_staging.sql"]
 }
 
+// Hinweise auf die gesetzlichen Grundlagen muss in einem 
+// nachgelagerten Schritt passieren, da es auf Resultate
+// aus dem ersten Schritt angewiesen ist und so immer
+// zu leeren Resultaten führen würde.
 task insertStaging(type: SqlExecutor) {
     description = "Baut die Daten aus dem kantonalen Modell in das Rahmenmodell um und speichert sie im Staging-Schema ($dbSchemaOerebNutzungsplanung)."
     group = GROUP_DATA_NPLSO2TRSFR
     database = [dbUriOereb, dbUserOereb, dbPwdOereb]
-    sqlFiles = ["insert_oereb_npl_staging.sql"]
+    sqlFiles = ["insert_oereb_npl_staging.sql", "insert_oereb_npl_staging_legal_basis.sql"]
 }
 
 task exportLandUsePlansToXtf(type: Ili2pgExport) {
@@ -32,6 +36,8 @@ task exportLandUsePlansToXtf(type: Ili2pgExport) {
     database = [dbUriOereb, dbUserOereb, dbPwdOereb]
     models = iliModelTransferstruktur
     dbschema = dbSchemaOerebNutzungsplanung
+    //dataset = "ch.so.sk.legal_basis"    
+    dataset = "ch.so.arp.nutzungsplanung"
     dataFile = file(Paths.get(pathToExportFolder.toString(), xtfOerebLandUsePlanFileName))
     disableValidation = true
 
