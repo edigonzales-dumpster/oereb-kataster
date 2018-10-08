@@ -67,6 +67,17 @@ task createSchemaOerebNutzungsplanung(type: Ili2pgImportSchema) {
     disableValidation = true
 }
 
+task importFederalLegalBasisToOerebNutzungsplanung(type: Ili2pgImport) {
+    description = "Importiert OeREBKRM_V1_1_Gesetze_20180501.xml."
+    group = GROUP_INIT_DB
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelVorschriften
+    dbschema = dbSchemaOerebNutzungsplanung
+    dataFile = "../../data/ch.admin/OeREBKRM_V1_1_Gesetze_20180501.xml"
+    dataset = "ch.admin.legal_basis"
+    disableValidation = true
+}
+
 task importCantonalLegalBasisToOerebNutzungsplanung(type: Ili2pgImport) {
     description = "Importiert ch.so.sk.gesetze.oereb.xml."
     group = GROUP_INIT_DB
@@ -78,14 +89,14 @@ task importCantonalLegalBasisToOerebNutzungsplanung(type: Ili2pgImport) {
     disableValidation = true
 }
 
-task importFederalLegalBasisToOerebNutzungsplanung(type: Ili2pgImport) {
-    description = "Importiert OeREBKRM_V1_1_Gesetze_20180501.xml."
+task importResponsibleOfficesToOerebNutzungsplanung(type: Ili2pgImport) {
+    description = "Importiert ch.so.arp.npl.zustaendigestelle.xml."
     group = GROUP_INIT_DB
     database = [dbUriOereb, dbUserOereb, dbPwdOereb]
     models = iliModelVorschriften
     dbschema = dbSchemaOerebNutzungsplanung
-    dataFile = "../../data/ch.admin/OeREBKRM_V1_1_Gesetze_20180501.xml"
-    dataset = "ch.admin.legal_basis"
+    dataFile = "../../data/ch.so.sk/ch.so.arp.npl.zustaendigestelle.xtf"
+    dataset = "ch.so.arp.nutzungsplanung" // Gleiches Dataset wie anschliessend die Daten des Datenumbaues, da Ämterinformationen Bestandteil des Transfers sein sollen.
     disableValidation = true
 }
 

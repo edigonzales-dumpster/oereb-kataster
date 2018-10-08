@@ -1,0 +1,2773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
+  <HEADERSECTION SENDER="ili2pg-3.12.3-SNAPSHOT-f6b79bfbc7556eb869a843878e1d64aec9d5d442" VERSION="2.3">
+    <MODELS>
+      <MODEL NAME="CatalogueObjects_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="CatalogueObjectTrees_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="InternationalCodes_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="Localisation_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="LocalisationCH_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="Dictionaries_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="DictionariesCH_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="CHAdminCodes_V1" VERSION="2018-02-19" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="AdministrativeUnits_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="AdministrativeUnitsCH_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="OeREBKRM_V1_1" VERSION="2016-08-15" URI="http://models.geo.admin.ch/V_D/OeREB/"/>
+      <MODEL NAME="OeREBKRMvs_V1_1" VERSION="2016-08-15" URI="http://models.geo.admin.ch/V_D/OeREB/"/>
+    </MODELS>
+  </HEADERSECTION>
+  <DATASECTION>
+    <OeREBKRMvs_V1_1.Vorschriften BID="10001">
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Amt für Raumplanung</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Amt für Raumplanung</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Amt für Raumplanung</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Amt für Raumplanung</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://arp.so.ch/</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2401">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2401</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2401</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2401</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2401</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2401</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2402">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2402</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2402</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2402</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2402</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2402</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2403">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2403</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2403</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2403</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2403</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2403</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2404">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2404</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2404</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2404</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2404</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2404</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2405">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2405</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2405</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2405</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2405</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2405</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2406">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2406</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2406</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2406</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2406</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2406</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2407">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2407</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2407</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2407</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2407</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2407</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2408">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2408</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2408</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2408</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2408</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2408</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2421">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2421</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2421</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2421</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2421</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2421</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2422">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2422</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2422</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2422</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2422</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2422</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2423">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2423</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2423</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2423</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2423</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2423</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2424">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2424</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2424</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2424</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2424</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2424</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2425">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2425</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2425</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2425</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2425</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2425</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2426">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2426</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2426</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2426</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2426</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2426</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2427">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2427</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2427</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2427</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2427</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2427</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2428">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2428</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2428</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2428</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2428</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2428</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2429">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2429</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2429</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2429</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2429</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2429</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2445">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2445</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2445</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2445</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2445</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2445</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2455">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2455</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2455</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2455</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2455</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2455</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2456">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2456</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2456</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2456</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2456</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2456</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2457">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2457</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2457</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2457</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2457</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2457</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2461">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2461</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2461</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2461</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2461</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2461</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2463">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2463</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2463</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2463</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2463</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2463</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2464">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2464</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2464</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2464</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2464</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2464</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2465">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2465</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2465</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2465</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2465</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2465</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2471">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2471</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2471</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2471</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2471</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2471</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2472">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2472</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2472</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2472</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2472</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2472</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2473">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2473</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2473</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2473</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2473</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2473</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2474">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2474</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2474</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2474</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2474</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2474</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2475">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2475</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2475</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2475</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2475</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2475</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2476">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2476</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2476</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2476</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2476</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2476</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2477">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2477</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2477</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2477</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2477</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2477</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2478">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2478</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2478</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2478</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2478</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2478</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2479">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2479</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2479</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2479</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2479</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2479</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2480">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2480</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2480</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2480</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2480</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2480</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2481">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2481</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2481</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2481</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2481</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2481</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2491">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2491</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2491</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2491</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2491</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2491</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2492">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2492</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2492</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2492</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2492</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2492</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2493">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2493</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2493</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2493</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2493</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2493</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2495">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2495</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2495</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2495</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2495</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2495</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2497">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2497</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2497</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2497</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2497</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2497</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2498">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2498</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2498</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2498</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2498</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2498</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2499">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2499</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2499</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2499</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2499</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2499</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2500">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2500</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2500</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2500</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2500</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2500</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2501">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2501</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2501</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2501</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2501</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2501</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2502">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2502</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2502</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2502</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2502</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2502</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2503">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2503</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2503</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2503</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2503</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2503</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2511">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2511</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2511</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2511</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2511</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2511</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2513">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2513</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2513</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2513</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2513</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2513</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2514">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2514</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2514</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2514</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2514</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2514</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2516">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2516</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2516</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2516</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2516</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2516</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2517">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2517</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2517</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2517</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2517</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2517</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2518">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2518</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2518</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2518</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2518</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2518</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2519">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2519</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2519</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2519</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2519</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2519</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2520">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2520</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2520</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2520</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2520</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2520</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2523">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2523</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2523</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2523</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2523</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2523</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2524">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2524</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2524</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2524</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2524</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2524</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2525">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2525</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2525</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2525</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2525</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2525</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2526">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2526</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2526</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2526</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2526</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2526</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2527">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2527</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2527</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2527</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2527</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2527</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2528">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2528</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2528</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2528</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2528</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2528</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2529">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2529</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2529</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2529</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2529</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2529</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2530">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2530</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2530</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2530</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2530</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2530</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2532">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2532</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2532</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2532</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2532</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2532</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2534">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2534</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2534</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2534</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2534</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2534</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2535">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2535</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2535</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2535</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2535</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2535</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2541">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2541</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2541</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2541</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2541</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2541</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2542">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2542</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2542</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2542</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2542</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2542</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2543">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2543</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2543</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2543</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2543</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2543</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2544">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2544</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2544</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2544</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2544</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2544</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2545">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2545</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2545</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2545</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2545</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2545</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2546">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2546</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2546</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2546</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2546</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2546</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2547">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2547</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2547</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2547</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2547</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2547</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2548">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2548</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2548</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2548</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2548</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2548</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2549">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2549</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2549</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2549</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2549</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2549</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2550">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2550</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2550</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2550</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2550</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2550</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2551">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2551</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2551</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2551</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2551</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2551</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2553">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2553</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2553</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2553</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2553</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2553</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2554">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2554</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2554</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2554</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2554</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2554</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2555">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2555</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2555</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2555</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2555</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2555</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2556">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2556</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2556</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2556</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2556</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2556</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2571">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2571</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2571</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2571</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2571</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2571</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2572">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2572</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2572</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2572</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2572</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2572</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2573">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2573</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2573</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2573</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2573</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2573</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2574">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2574</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2574</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2574</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2574</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2574</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2575">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2575</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2575</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2575</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2575</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2575</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2576">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2576</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2576</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2576</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2576</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2576</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2578">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2578</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2578</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2578</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2578</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2578</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2579">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2579</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2579</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2579</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2579</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2579</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2580">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2580</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2580</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2580</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2580</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2580</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2581">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2581</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2581</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2581</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2581</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2581</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2582">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2582</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2582</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2582</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2582</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2582</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2583">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2583</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2583</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2583</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2583</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2583</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2584">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2584</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2584</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2584</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2584</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2584</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2585">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2585</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2585</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2585</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2585</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2585</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2586">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2586</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2586</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2586</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2586</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2586</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2601">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2601</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2601</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2601</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2601</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2601</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2611">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2611</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2611</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2611</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2611</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2611</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2612">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2612</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2612</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2612</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2612</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2612</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2613">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2613</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2613</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2613</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2613</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2613</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2614">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2614</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2614</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2614</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2614</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2614</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2615">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2615</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2615</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2615</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2615</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2615</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2616">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2616</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2616</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2616</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2616</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2616</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2617">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2617</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2617</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2617</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2617</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2617</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2618">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2618</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2618</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2618</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2618</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2618</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2619">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2619</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2619</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2619</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2619</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2619</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2620">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2620</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2620</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2620</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2620</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2620</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2621">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2621</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2621</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2621</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2621</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2621</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2622">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gemeinde 2622</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Gemeinde 2622</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Gemeinde 2622</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Gemeinde 2622</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.fubar.ch/2622</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
+    </OeREBKRMvs_V1_1.Vorschriften>
+  </DATASECTION>
+</TRANSFER>

@@ -19,6 +19,7 @@ allprojects{
 
         dbSchemaOereb = "agi_oereb"
         dbSchemaOerebNutzungsplanung = "arp_npl_oereb"
+        dbSchemaOerebNutzungsplanungZustaendigeStelle = "arp_npl_oereb_zustaendige_stelle"
         dbSchemaNutzungsplanung = "arp_npl"
 
         iliModelBasis = 'OeREBKRM_V1_1'

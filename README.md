@@ -8,7 +8,7 @@ Enthält PostgresSQL/PostGIS und QGIS 3.
 
 ## Datenbank initialisieren
 ```
-gradle createSchemaOereb importFederalCodesets importFederalLegalBasis createSchemaOerebNutzungsplanung importFederalLegalBasisToOerebNutzungsplanung importCantonalLegalBasisToOerebNutzungsplanung createSchemaNutzungsplanung
+gradle createSchemaOereb importFederalCodesets importFederalLegalBasis createSchemaOerebNutzungsplanung importFederalLegalBasisToOerebNutzungsplanung importCantonalLegalBasisToOerebNutzungsplanung importMunicipalityInformationToOerebNutzungsplanung createSchemaNutzungsplanung
 ```
 Erstellt drei Schemas:
 
@@ -29,7 +29,7 @@ Importiert die Nutzungsplanungsdaten im kantonalen Modell (liegen auf AWS S3).
 
 ## Umbau Nutzungsplanung kantonales Modell -> Transferstruktur
 ```
-gradle deleteStaging deleteStaging
+gradle deleteStaging insertStaging
 ```
 Löscht zuerst die Daten aus dem Staging-Schema und führt anschliessend den Datenumbau aus. Die gesetzlichen Grundlagen wurde in einem anderen Basket/Dataset importiert und werden nicht gelöscht. 
 
@@ -45,3 +45,4 @@ Exportiert die Nutzungsplanungsdaten in die Transferstruktur (nur Nutzungsplanun
 - Wann verweist etwas auf die gesetzliche Grundlage? Wann auf PBG, wann auf KBV?
 - Symbole? GeoScript-Groovy und SLD?
 - ArtCode: 40 Zeichen gemäss Modell. Reicht nicht für unsere Aufzähltypen -> Nur die ersten vier Zeichen NXXX?
+- Das mit den zuständigen Stellen ist noch tricky. Braucht es das ARP überhaupt? Für kantonale Sachen wohl schon? Workflow/Prozess auch gut überlegen. Was gehört in welches File?
