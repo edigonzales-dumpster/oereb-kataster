@@ -51,5 +51,5 @@ Exportiert die Nutzungsplanungsdaten in die Transferstruktur (nur Nutzungsplanun
 - Unterschied ZustaendigeStelleEigentumsbeschraenkung zu ZustaendigeStelleGeometrie
 - Sprache: so wie ich es verstehe muss nur einer der vier Sprachen unterstützt werden.
 - Notfalls könnte man auch noch _nachträglich_ z.B. Typen/Eigentumsbeschränkungen (inkl. Dokumente) entfernen, an diese keine Geometrie angehängt ist.
-
+- Was sint "keine Geometrie+Darstellung nur zulässig bei Grundlage-Eigentumsbeschränkungen" Grundlage-Eigentumsbeschränkungen
 - KO-Modell... Lieferungen
