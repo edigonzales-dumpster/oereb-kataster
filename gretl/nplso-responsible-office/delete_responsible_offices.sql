@@ -1,0 +1,3 @@
+DELETE FROM arp_npl_oereb_zustaendige_stelle.vorschriften_amt;
+DELETE FROM arp_npl_oereb_zustaendige_stelle.t_ili2db_basket;
+DELETE FROM arp_npl_oereb_zustaendige_stelle.t_ili2db_dataset;

@@ -1,7 +1,3 @@
-DELETE FROM arp_npl_oereb_zustaendige_stelle.vorschriften_amt;
-DELETE FROM arp_npl_oereb_zustaendige_stelle.t_ili2db_basket;
-DELETE FROM arp_npl_oereb_zustaendige_stelle.t_ili2db_dataset;
-
 INSERT INTO arp_npl_oereb_zustaendige_stelle.t_ili2db_dataset (
   t_id, 
   datasetname
@@ -20,7 +16,7 @@ INSERT INTO arp_npl_oereb_zustaendige_stelle.t_ili2db_basket (
 VALUES (
   10001, 
   10000, 
-  'OeREBKRMvs_V1_1.Vorschriften', 
+  'OeREBKRMtrsfr_V1_1.Transferstruktur', 
   'fubar'
 );
 
@@ -30,6 +26,7 @@ INSERT INTO arp_npl_oereb_zustaendige_stelle.vorschriften_amt (
   t_ili_tid,
   aname_de,
   aname_fr,
+  aname_rm,
   aname_it,
   aname_en,
   amtimweb
@@ -38,6 +35,7 @@ VALUES (
   10001,
   'ch.so.arp.nutzungsplanung',
   'ch.so.arp.npl',
+  'Amt für Raumplanung',
   'Amt für Raumplanung',
   'Amt für Raumplanung',
   'Amt für Raumplanung',
@@ -56,6 +54,7 @@ INSERT INTO arp_npl_oereb_zustaendige_stelle.vorschriften_amt (
   t_ili_tid,
   aname_de,
   aname_fr,
+  aname_rm,
   aname_it,
   aname_en,
   amtimweb
@@ -66,6 +65,7 @@ SELECT
   'ch.so.arp.npl.'||bfsnr AS t_ili_tid,
   'Gemeinde '||bfsnr AS aname_de,
   'Gemeinde '||bfsnr AS aname_fr,
+  'Gemeinde '||bfsnr AS aname_rm,
   'Gemeinde '||bfsnr AS aname_it,
   'Gemeinde '||bfsnr AS aname_en,
   'http://www.fubar.ch/'||bfsnr AS amtimweb

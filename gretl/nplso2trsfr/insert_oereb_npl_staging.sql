@@ -1,35 +1,26 @@
+-- Existiert bereits wegen Import der zuständigen Stellen.
 WITH dataset_nutzungsplanung AS 
 (
-  INSERT INTO arp_npl_oereb.t_ili2db_dataset (
-    t_id, 
-    datasetname
-  )
-  VALUES
-  (
-    nextval('arp_npl_oereb.t_ili2db_seq'::regclass),
-    'ch.so.arp.nutzungsplanung'
-  )
-  RETURNING *
+  SELECT
+    *
+  FROM
+    arp_npl_oereb.t_ili2db_dataset
+  WHERE
+    datasetname = 'ch.so.arp.nutzungsplanung'
 )
 ,
 basket_nutzungsplanung AS 
 (
-  INSERT INTO arp_npl_oereb.t_ili2db_basket (
-    t_id,
-    dataset,
-    topic,
-    attachmentkey
-  )
   SELECT
-    nextval('arp_npl_oereb.t_ili2db_seq'::regclass) AS t_id,
-    dataset_nutzungsplanung.t_id AS dataset,
-    'OeREBKRMtrsfr_V1_1.Transferstruktur' AS topic,
-    'sql'
+    t_ili2db_basket.t_id
   FROM
-    dataset_nutzungsplanung 
-  RETURNING *
+    arp_npl_oereb.t_ili2db_basket AS t_ili2db_basket,
+    dataset_nutzungsplanung
+  WHERE 
+    dataset = dataset_nutzungsplanung.t_id
 )
 ,
+/*
 vorschriften_amt AS 
 (
   INSERT INTO arp_npl_oereb.vorschriften_amt (
@@ -51,6 +42,7 @@ vorschriften_amt AS
   RETURNING *
 )
 ,
+*/
 vorschrift_dokument AS 
 (
   SELECT
@@ -58,7 +50,6 @@ vorschrift_dokument AS
     basket_nutzungsplanung.t_id AS t_basket,
     dataset_nutzungsplanung.datasetname AS t_datasetname,
     rechtsvorschrften_dokument.t_id AS rechtsvorschrften_dokument_t_id,
-    --uuid_generate_v4() AS t_ili_tid,
     rechtsvorschrften_dokument.t_ili_tid,
     CASE
       WHEN rechtsvorschrift IS TRUE
@@ -73,11 +64,9 @@ vorschrift_dokument AS
     gemeinde,
     publiziertab,
     rechtsstatus,
-    'https://geo.so.ch/docs/ch.so.arp.zonenplaene/Zonenplaene_pdf/' || textimweb AS textimweb,
-    vorschriften_amt.t_id AS zustaendigestelle
+    'https://geo.so.ch/docs/ch.so.arp.zonenplaene/Zonenplaene_pdf/' || textimweb AS textimweb
   FROM
     arp_npl.rechtsvorschrften_dokument AS rechtsvorschrften_dokument,
-    vorschriften_amt,
     basket_nutzungsplanung,
     dataset_nutzungsplanung
 )
@@ -91,15 +80,27 @@ vorschrift_dokument_insert AS
     t_ili_tid,
     t_type,
     titel_de,
+    titel_fr,
+    titel_rm,
+    titel_it,
+    titel_en,
     offiziellertitel_de,
+    offiziellertitel_fr,
+    offiziellertitel_rm,
+    offiziellertitel_it,
+    offiziellertitel_en,
     abkuerzung_de,
+    abkuerzung_fr,
+    abkuerzung_rm,
+    abkuerzung_it,
+    abkuerzung_en,
     offiziellenr,
     kanton,
     gemeinde,
     publiziertab,
     rechtsstatus,
-    zustaendigestelle
-  )
+    zustaendigestelle 
+)
   SELECT
     t_id,
     t_basket,
@@ -107,14 +108,26 @@ vorschrift_dokument_insert AS
     t_ili_tid,
     t_type,
     titel_de,
+    titel_de,
+    titel_de,
+    titel_de,
+    titel_de,
     offiziellertitel_de,
+    offiziellertitel_de,
+    offiziellertitel_de,
+    offiziellertitel_de,
+    offiziellertitel_de,
+    abkuerzung_de,
+    abkuerzung_de,
+    abkuerzung_de,
+    abkuerzung_de,
     abkuerzung_de,
     offiziellenr,
     kanton,
     gemeinde,
     publiziertab,
     rechtsstatus,
-    zustaendigestelle
+    NULL::int AS zustaendigestelle -- Wird in einem anschliessenden Update-Befehl mit den korrekten Beziehungen abgefüllt.
   FROM
     vorschrift_dokument
   RETURNING *
@@ -209,7 +222,7 @@ vorschriften_hinweisweiteredokumente_insert AS
   RETURNING *
 )
 ,
-transferstruktur_darstellungsdienst AS (
+transferstruktur_darstellungsdienst_grundnutzung AS (
   INSERT INTO arp_npl_oereb.transferstruktur_darstellungsdienst (
     t_basket,
     t_datasetname,
@@ -218,7 +231,7 @@ transferstruktur_darstellungsdienst AS (
   SELECT
     basket_nutzungsplanung.t_id AS t_basket,
     dataset_nutzungsplanung.datasetname AS t_datasetname,
-    'https://geo.so.ch/ows/somap/hier/kommt/noch/was' AS verweiswms
+    'https://geo.so.ch/wms/ch.so.arp.npl.grundnutzung.oereb?SERVICE=WMS&REQUEST=GetMap/usw/usf' AS verweiswms
   FROM
     basket_nutzungsplanung,
     dataset_nutzungsplanung
@@ -248,7 +261,7 @@ eigentumsbeschraenkung_grundnutzung AS
      *    Probleme verursacht weil die Typen mit Dokumenten verknüpft sind
      *    und ich nicht einfach die Typen nicht einfach wegfiltern kann, weil
      *    sonst 'hinweisvorschrift (n:m)' eventuell ins Leere zeigt.
-     *  Variante: Alles was ins Leere (NULL) zeigt, wegfiltern.
+     *  Variante: Alles was ins Leere (NULL) zeigt, später wegfiltern (INNER JOIN).
      */
     CASE 
       WHEN grundnutzung.rechtsstatus IS NULL THEN 'inKraft'
@@ -280,6 +293,10 @@ eigentumsbeschraenkung_grundnutzung_insert AS
     t_basket,
     t_datasetname,
     aussage_de,
+    aussage_fr,
+    aussage_rm,
+    aussage_it,
+    aussage_en,
     thema,
     subthema,
     artcode,
@@ -294,18 +311,21 @@ eigentumsbeschraenkung_grundnutzung_insert AS
     eigentumsbeschraenkung_grundnutzung.t_basket,
     eigentumsbeschraenkung_grundnutzung.t_datasetname,
     aussage_de,
+    aussage_de,
+    aussage_de,
+    aussage_de,
+    aussage_de,
     thema,
     subthema,
     artcode,
     artcodeliste,
     rechtsstatus,
     publiziertab,
-    transferstruktur_darstellungsdienst.t_id AS verweiswms,
-    vorschriften_amt.t_id AS zustaendigestelle
+    transferstruktur_darstellungsdienst_grundnutzung.t_id AS verweiswms,
+    NULL::int AS zustaendigestelle
   FROM
     eigentumsbeschraenkung_grundnutzung,
-    vorschriften_amt,
-    transferstruktur_darstellungsdienst
+    transferstruktur_darstellungsdienst_grundnutzung
   RETURNING * 
 )
 ,
@@ -345,14 +365,14 @@ transferstruktur_geometrie_grundnutzung AS (
     nutzungsplanung_grundnutzung.rechtsstatus,
     nutzungsplanung_grundnutzung.publiziertab,
     eigentumsbeschraenkung_grundnutzung.t_id AS eigentumsbeschraenkung,
-    vorschriften_amt.t_id AS zustaendigestelle,
+    --vorschriften_amt.t_id AS zustaendigestelle,
     nutzungsplanung_grundnutzung.geometrie AS flaeche_lv95
   FROM
     arp_npl.nutzungsplanung_grundnutzung AS nutzungsplanung_grundnutzung
     LEFT JOIN eigentumsbeschraenkung_grundnutzung
     ON nutzungsplanung_grundnutzung.typ_grundnutzung = eigentumsbeschraenkung_grundnutzung.typ_grundnutzung_t_id
-    LEFT JOIN vorschriften_amt
-    ON 1=1
+    --LEFT JOIN vorschriften_amt
+    --ON 1=1
     LEFT JOIN basket_nutzungsplanung
     ON 1=1
     LEFT JOIN dataset_nutzungsplanung
@@ -377,10 +397,26 @@ transferstruktur_geometrie_grundnutzung_insert AS (
     rechtsstatus,
     publiziertab,
     eigentumsbeschraenkung,
-    zustaendigestelle,
+    NULL::int,
     flaeche_lv95
   FROM
     transferstruktur_geometrie_grundnutzung
+  RETURNING *
+)
+,
+transferstruktur_darstellungsdienst_ueberlagernd_flaeche AS (
+  INSERT INTO arp_npl_oereb.transferstruktur_darstellungsdienst (
+    t_basket,
+    t_datasetname,
+    verweiswms
+  )
+  SELECT
+    basket_nutzungsplanung.t_id AS t_basket,
+    dataset_nutzungsplanung.datasetname AS t_datasetname,
+    'https://geo.so.ch/wms/ch.so.arp.npl.ueberlagernd_flaeche.oereb?SERVICE=WMS&REQUEST=GetMap/usw/usf' AS verweiswms
+  FROM
+    basket_nutzungsplanung,
+    dataset_nutzungsplanung
   RETURNING *
 )
 ,
@@ -446,12 +482,11 @@ eigentumsbeschraenkung_ueberlagernd_flaeche_insert AS
     artcodeliste,
     rechtsstatus,
     publiziertab,
-    transferstruktur_darstellungsdienst.t_id AS verweiswms,
-    vorschriften_amt.t_id AS zustaendigestelle
+    transferstruktur_darstellungsdienst_ueberlagernd_flaeche.t_id AS verweiswms,
+    NULL::int
   FROM
     eigentumsbeschraenkung_ueberlagernd_flaeche,
-    vorschriften_amt,
-    transferstruktur_darstellungsdienst
+    transferstruktur_darstellungsdienst_ueberlagernd_flaeche
   RETURNING * 
 )
 ,
@@ -491,14 +526,14 @@ transferstruktur_geometrie_ueberlagernd_flaeche AS (
     nutzungsplanung_ueberlagernd_flaeche.rechtsstatus,
     nutzungsplanung_ueberlagernd_flaeche.publiziertab,
     eigentumsbeschraenkung_ueberlagernd_flaeche.t_id AS eigentumsbeschraenkung,
-    vorschriften_amt.t_id AS zustaendigestelle,
+    --vorschriften_amt.t_id AS zustaendigestelle,
     nutzungsplanung_ueberlagernd_flaeche.geometrie AS flaeche_lv95
   FROM
     arp_npl.nutzungsplanung_ueberlagernd_flaeche AS nutzungsplanung_ueberlagernd_flaeche
     INNER JOIN eigentumsbeschraenkung_ueberlagernd_flaeche
     ON nutzungsplanung_ueberlagernd_flaeche.typ_ueberlagernd_flaeche = eigentumsbeschraenkung_ueberlagernd_flaeche.typ_ueberlagernd_flaeche_t_id
-    LEFT JOIN vorschriften_amt
-    ON 1=1
+    --LEFT JOIN vorschriften_amt
+    --ON 1=1
     LEFT JOIN basket_nutzungsplanung
     ON 1=1
     LEFT JOIN dataset_nutzungsplanung
@@ -523,10 +558,26 @@ transferstruktur_geometrie_ueberlagernd_flaeche_insert AS (
     rechtsstatus,
     publiziertab,
     eigentumsbeschraenkung,
-    zustaendigestelle,
+    NULL::int,
     flaeche_lv95
   FROM
     transferstruktur_geometrie_ueberlagernd_flaeche
+  RETURNING *
+)
+,
+transferstruktur_darstellungsdienst_ueberlagernd_linie AS (
+  INSERT INTO arp_npl_oereb.transferstruktur_darstellungsdienst (
+    t_basket,
+    t_datasetname,
+    verweiswms
+  )
+  SELECT
+    basket_nutzungsplanung.t_id AS t_basket,
+    dataset_nutzungsplanung.datasetname AS t_datasetname,
+    'https://geo.so.ch/wms/ch.so.arp.npl.ueberlagernd_linie.oereb?SERVICE=WMS&REQUEST=GetMap/usw/usf' AS verweiswms
+  FROM
+    basket_nutzungsplanung,
+    dataset_nutzungsplanung
   RETURNING *
 )
 ,
@@ -590,12 +641,11 @@ eigentumsbeschraenkung_ueberlagernd_linie_insert AS
     artcodeliste,
     rechtsstatus,
     publiziertab,
-    transferstruktur_darstellungsdienst.t_id AS verweiswms,
-    vorschriften_amt.t_id AS zustaendigestelle
+    transferstruktur_darstellungsdienst_ueberlagernd_linie.t_id AS verweiswms,
+    NULL::int
   FROM
     eigentumsbeschraenkung_ueberlagernd_linie,
-    vorschriften_amt,
-    transferstruktur_darstellungsdienst
+    transferstruktur_darstellungsdienst_ueberlagernd_linie
   RETURNING * 
 )
 ,
@@ -635,14 +685,14 @@ transferstruktur_geometrie_ueberlagernd_linie AS (
     nutzungsplanung_ueberlagernd_linie.rechtsstatus,
     nutzungsplanung_ueberlagernd_linie.publiziertab,
     eigentumsbeschraenkung_ueberlagernd_linie.t_id AS eigentumsbeschraenkung,
-    vorschriften_amt.t_id AS zustaendigestelle,
+    --vorschriften_amt.t_id AS zustaendigestelle,
     nutzungsplanung_ueberlagernd_linie.geometrie AS linie_lv95
   FROM
     arp_npl.nutzungsplanung_ueberlagernd_linie AS nutzungsplanung_ueberlagernd_linie
     INNER JOIN eigentumsbeschraenkung_ueberlagernd_linie
     ON nutzungsplanung_ueberlagernd_linie.typ_ueberlagernd_linie = eigentumsbeschraenkung_ueberlagernd_linie.typ_ueberlagernd_linie_t_id
-    LEFT JOIN vorschriften_amt
-    ON 1=1
+    --LEFT JOIN vorschriften_amt
+    --ON 1=1
     LEFT JOIN basket_nutzungsplanung
     ON 1=1
     LEFT JOIN dataset_nutzungsplanung
@@ -667,10 +717,26 @@ transferstruktur_geometrie_ueberlagernd_linie_insert AS (
     rechtsstatus,
     publiziertab,
     eigentumsbeschraenkung,
-    zustaendigestelle,
+    NULL::int,
     linie_lv95
   FROM
     transferstruktur_geometrie_ueberlagernd_linie
+  RETURNING *
+)
+,
+transferstruktur_darstellungsdienst_ueberlagernd_punkt AS (
+  INSERT INTO arp_npl_oereb.transferstruktur_darstellungsdienst (
+    t_basket,
+    t_datasetname,
+    verweiswms
+  )
+  SELECT
+    basket_nutzungsplanung.t_id AS t_basket,
+    dataset_nutzungsplanung.datasetname AS t_datasetname,
+    'https://geo.so.ch/wms/ch.so.arp.npl.ueberlagernd_punkt.oereb?SERVICE=WMS&REQUEST=GetMap/usw/usf' AS verweiswms
+  FROM
+    basket_nutzungsplanung,
+    dataset_nutzungsplanung
   RETURNING *
 )
 ,
@@ -734,12 +800,11 @@ eigentumsbeschraenkung_ueberlagernd_punkt_insert AS
     artcodeliste,
     rechtsstatus,
     publiziertab,
-    transferstruktur_darstellungsdienst.t_id AS verweiswms,
-    vorschriften_amt.t_id AS zustaendigestelle
+    transferstruktur_darstellungsdienst_ueberlagernd_punkt.t_id AS verweiswms,
+    NULL::int AS zustaendigestelle
   FROM
     eigentumsbeschraenkung_ueberlagernd_punkt,
-    vorschriften_amt,
-    transferstruktur_darstellungsdienst
+    transferstruktur_darstellungsdienst_ueberlagernd_punkt
   RETURNING * 
 )
 ,
@@ -779,14 +844,14 @@ transferstruktur_geometrie_ueberlagernd_punkt AS (
     nutzungsplanung_ueberlagernd_punkt.rechtsstatus,
     nutzungsplanung_ueberlagernd_punkt.publiziertab,
     eigentumsbeschraenkung_ueberlagernd_punkt.t_id AS eigentumsbeschraenkung,
-    vorschriften_amt.t_id AS zustaendigestelle,
+    --vorschriften_amt.t_id AS zustaendigestelle,
     nutzungsplanung_ueberlagernd_punkt.geometrie AS punkt_lv95
   FROM
     arp_npl.nutzungsplanung_ueberlagernd_punkt AS nutzungsplanung_ueberlagernd_punkt
     INNER JOIN eigentumsbeschraenkung_ueberlagernd_punkt
     ON nutzungsplanung_ueberlagernd_punkt.typ_ueberlagernd_punkt = eigentumsbeschraenkung_ueberlagernd_punkt.typ_ueberlagernd_punkt_t_id
-    LEFT JOIN vorschriften_amt
-    ON 1=1
+    --LEFT JOIN vorschriften_amt
+    --ON 1=1
     LEFT JOIN basket_nutzungsplanung
     ON 1=1
     LEFT JOIN dataset_nutzungsplanung
@@ -811,11 +876,11 @@ transferstruktur_geometrie_ueberlagernd_punkt_insert AS (
     rechtsstatus,
     publiziertab,
     eigentumsbeschraenkung,
-    zustaendigestelle,
+    NULL::int,
     punkt_lv95
   FROM
     transferstruktur_geometrie_ueberlagernd_punkt
   RETURNING *
 )
 SELECT 1
-; 
+;

@@ -11,7 +11,7 @@ task createSchemaOerebNutzungsplanungZustaendigeStelle(type: Ili2pgImportSchema)
     description = "Erstellt ein OEREB-Vorschriften Schema zum einmaligen Erfassen/Abfüllen der zuständigen Stellen (kommunal und kantonal)."
     group = GROUP_INIT_DB_NPLSO_RESP_OFFICES
     database = [dbUriOereb, dbUserOereb, dbPwdOereb]
-    models = iliModelVorschriften
+    models = iliModelTransferstruktur
     dbschema = dbSchemaOerebNutzungsplanungZustaendigeStelle
     nameByTopic = true
     createFk = false
@@ -30,7 +30,7 @@ task deleteInsertZustaendigeStelle(type: SqlExecutor) {
     description = "Füllt eher Dummy-Daten für die zuständigen Stellen in die Tabelle 'Vorschriften_Amt' ein. Für Proof-of-Concept' reicht es. T_ili_tid ist matchentscheiden."
     group = GROUP_INIT_DB_NPLSO_RESP_OFFICES
     database = [dbUriOereb, dbUserOereb, dbPwdOereb]
-    sqlFiles = ["delete_insert_responsible_offices.sql"]
+    sqlFiles = ["delete_responsible_offices.sql","insert_responsible_offices.sql"]
 }
 
 
@@ -38,7 +38,7 @@ task exportZustaendigeStelle(type: Ili2pgExport) {
     description = "Exportiert die zuständigen STellen in eine INTERLIS-Transferdatei."
     group = GROUP_INIT_DB_NPLSO_RESP_OFFICES
     database = [dbUriOereb, dbUserOereb, dbPwdOereb]
-    models = iliModelVorschriften
+    models = iliModelTransferstruktur
     dbschema = dbSchemaOerebNutzungsplanungZustaendigeStelle
     dataFile = "ch.so.arp.npl.zustaendigestelle.xtf"
     disableValidation = true

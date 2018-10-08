@@ -63,6 +63,7 @@ task createSchemaOerebNutzungsplanung(type: Ili2pgImportSchema) {
     createBasketCol = true
     createDatasetCol = true
     strokeArcs = true
+    sqlEnableNull = true
     defaultSrsCode = 2056
     disableValidation = true
 }
@@ -93,7 +94,8 @@ task importResponsibleOfficesToOerebNutzungsplanung(type: Ili2pgImport) {
     description = "Importiert ch.so.arp.npl.zustaendigestelle.xml."
     group = GROUP_INIT_DB
     database = [dbUriOereb, dbUserOereb, dbPwdOereb]
-    models = iliModelVorschriften
+    //models = iliModelVorschriften
+    models = iliModelTransferstruktur
     dbschema = dbSchemaOerebNutzungsplanung
     dataFile = "../../data/ch.so.sk/ch.so.arp.npl.zustaendigestelle.xtf"
     dataset = "ch.so.arp.nutzungsplanung" // Gleiches Dataset wie anschliessend die Daten des Datenumbaues, da Ämterinformationen Bestandteil des Transfers sein sollen.

@@ -45,4 +45,11 @@ Exportiert die Nutzungsplanungsdaten in die Transferstruktur (nur Nutzungsplanun
 - Wann verweist etwas auf die gesetzliche Grundlage? Wann auf PBG, wann auf KBV?
 - Symbole? GeoScript-Groovy und SLD?
 - ArtCode: 40 Zeichen gemäss Modell. Reicht nicht für unsere Aufzähltypen -> Nur die ersten vier Zeichen NXXX?
-- Das mit den zuständigen Stellen ist noch tricky. Braucht es das ARP überhaupt? Für kantonale Sachen wohl schon? Workflow/Prozess auch gut überlegen. Was gehört in welches File?
+- Das mit den zuständigen Stellen ist noch tricky. Braucht es das ARP überhaupt? Für kantonale Sachen wohl schon? Workflow/Prozess auch gut überlegen. Was gehört in welches File? Ich mache es jetzt nachträglich der ersten Umbauquery mit einem Update. Kann soweit ganz gut fein granuliert werden (glaubs).
+ * Wald und Verkehrsflächen zeigen auch hier manchmal ins Leere. -> für jetzt mal einfach Kantonsstellen erfassen (im XML)?
+- Was ist mit Multi-Language? alles einfach "de" machen?
+- Unterschied ZustaendigeStelleEigentumsbeschraenkung zu ZustaendigeStelleGeometrie
+- Sprache: so wie ich es verstehe muss nur einer der vier Sprachen unterstützt werden.
+- Notfalls könnte man auch noch _nachträglich_ z.B. Typen/Eigentumsbeschränkungen (inkl. Dokumente) entfernen, an diese keine Geometrie angehängt ist.
+
+- KO-Modell... Lieferungen

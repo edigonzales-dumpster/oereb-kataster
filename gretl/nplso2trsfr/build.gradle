@@ -23,11 +23,13 @@ task deleteStaging(type: SqlExecutor) {
 // nachgelagerten Schritt passieren, da es auf Resultate
 // aus dem ersten Schritt angewiesen ist und so immer
 // zu leeren Resultaten führen würde.
+// Ebenfalls in einer nachgelagerter Query werden die
+// zustaendigen Stellen nachgeführt.
 task insertStaging(type: SqlExecutor) {
     description = "Baut die Daten aus dem kantonalen Modell in das Rahmenmodell um und speichert sie im Staging-Schema ($dbSchemaOerebNutzungsplanung)."
     group = GROUP_DATA_NPLSO2TRSFR
     database = [dbUriOereb, dbUserOereb, dbPwdOereb]
-    sqlFiles = ["insert_oereb_npl_staging.sql", "insert_oereb_npl_staging_legal_basis.sql"]
+    sqlFiles = ["insert_oereb_npl_staging.sql", "insert_oereb_npl_staging_legal_basis.sql", "update_oereb_npl_staging_responsible_office.sql"]
 }
 
 task exportLandUsePlansToXtf(type: Ili2pgExport) {
