@@ -112,13 +112,16 @@ Vagrant.configure("2") do |config|
     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80/ --recv-key 073D307A618E5811
     apt-get update
     apt-get upgrade
-    apt-get install -y gdal-bin
+    apt-get install -y gdal-bin python-gdal
     apt-get install -y xauth zip
     apt-get install -y ifupdown
     apt-get install -y fonts-liberation
     echo 'deb     https://qgis.org/debian-ltr bionic main' | tee /etc/apt/sources.list.d/qgis.list
     apt-key adv --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45
     apt-get update
-    apt-get install -y qgis python-qgis
+    apt-get install -y apache2 libapache2-mod-fcgid
+    apt-get install -y qgis python-qgis qgis-server
+    cp /vagrant/vagrant/000-default.conf /etc/apache2/sites-available/000-default.conf
+    service apache2 restart
     SHELL
 end
