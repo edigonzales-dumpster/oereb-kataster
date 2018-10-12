@@ -126,5 +126,22 @@ Vagrant.configure("2") do |config|
     cp /vagrant/vagrant/000-default.conf /etc/apache2/sites-available/000-default.conf
     cp /vagrant/vagrant/fcgid.conf /etc/apache2/mods-available/fcgid.conf
     service apache2 restart
+    add-apt-repository ppa:openjdk-r/ppa -y
+    apt-get update
+    apt-get install -y openjdk-8-jre
+    JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+    export JAVA_HOME
+    echo "export GEOSERVER_HOME=/usr/local/geoserver/" >> ~/.profile
+    . ~/.profile
+    rm -rf /usr/local/geoserver/
+    mkdir /usr/local/geoserver/
+    chown -R vagrant /usr/local/geoserver/
+    cd /usr/local
+    apt-get install -y zip unzip
+    wget -nv -O tmp.zip http://sourceforge.net/projects/geoserver/files/GeoServer/2.13.2/geoserver-2.13.2-bin.zip && unzip tmp.zip -d /usr/local/ && rm tmp.zip
+    cp -r /usr/local/geoserver-2.13.2/* /usr/local/geoserver && sudo rm -rf /usr/local/geoserver-2.13.2/
+    sudo chown -R vagrant /usr/local/geoserver/
+    cp /vagrant/vagrant/geoserver /etc/init.d/geoserver
+    sudo chmod +x /etc/init.d/geoserver
     SHELL
 end
