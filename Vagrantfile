@@ -33,10 +33,10 @@ Vagrant.configure("2") do |config|
   # config.vm.network "private_network", ip: "192.168.33.10"
   config.vm.network "private_network", ip: "192.168.50.8"
   
-  # Create a oereblic network, which generally matched to bridged network.
+  # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
-  # config.vm.network "oereblic_network"
+  # config.vm.network "public_network"
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -75,7 +75,7 @@ Vagrant.configure("2") do |config|
     locale-gen de_CH.utf8
     echo "Europe/Zurich" | tee /etc/timezone
     dpkg-reconfigure --frontend noninteractive tzdata
-    echo 'deb http://apt.postgresql.org/oereb/repos/apt/ bionic-pgdg main' >> /etc/apt/sources.list.d/pgdg.list
+    echo 'deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main' >> /etc/apt/sources.list.d/pgdg.list
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -    
     apt-get update
     apt-get install -y postgresql-10 
@@ -116,12 +116,15 @@ Vagrant.configure("2") do |config|
     apt-get install -y xauth zip
     apt-get install -y ifupdown
     apt-get install -y fonts-liberation
-    echo 'deb     https://qgis.org/debian-ltr bionic main' | tee /etc/apt/sources.list.d/qgis.list
+    echo 'deb     https://qgis.org/ubuntu-nightly bionic main' | tee /etc/apt/sources.list.d/qgis.list
     apt-key adv --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45
     apt-get update
     apt-get install -y apache2 libapache2-mod-fcgid
     apt-get install -y qgis python-qgis qgis-server
+    mkdir /var/log/qgis
+    chown www-data:www-data /var/log/qgis
     cp /vagrant/vagrant/000-default.conf /etc/apache2/sites-available/000-default.conf
+    cp /vagrant/vagrant/fcgid.conf /etc/apache2/mods-available/fcgid.conf
     service apache2 restart
     SHELL
 end

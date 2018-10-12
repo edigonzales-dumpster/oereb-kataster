@@ -102,6 +102,14 @@ task importResponsibleOfficesToOerebNutzungsplanung(type: Ili2pgImport) {
     disableValidation = true
 }
 
+// Quick 'n' dirty Views für WMS-Layer
+task createOerebNutzungsplanungViews(type: SqlExecutor) {
+    description = "Erzeugt Views für WMS-Layer in Nutzungsplanungs-Staging-Schema ($dbSchemaOerebNutzungsplanung). Ist so nur zum Testen des Proof of Concepts."
+    group = GROUP_INIT_DB
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    sqlFiles = ["arp_npl_oereb_views.sql"]
+}
+
 task createSchemaNutzungsplanung(type: Ili2pgImportSchema) {
     description = "Erstellt das Nutzungsplanungs-Datenbankschema (Kantonsmodell)."
     group = GROUP_INIT_DB
@@ -120,4 +128,24 @@ task createSchemaNutzungsplanung(type: Ili2pgImportSchema) {
     defaultSrsCode = 2056
     disableValidation = true
 }
+
+task createSchemaAmtlicheVermessung(type: Ili2pgImportSchema) {
+    description = "Erstellt das Datenbankschema für die amtliche Vermessung (Bundesmodell)."
+    group = GROUP_INIT_DB
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelAmtlicheVermessung
+    dbschema = dbSchemaAmtlicheVermessung
+    nameByTopic = true
+    createFk = false
+    createFkIdx = true
+    createUnique = false
+    createNumChecks = false
+    createEnumTabs = true
+    createBasketCol = true
+    createDatasetCol = true
+    strokeArcs = true
+    defaultSrsCode = 2056
+    disableValidation = true
+}
+
 

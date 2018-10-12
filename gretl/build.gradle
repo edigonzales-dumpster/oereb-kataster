@@ -21,11 +21,13 @@ allprojects{
         dbSchemaOerebNutzungsplanung = "arp_npl_oereb"
         dbSchemaOerebNutzungsplanungZustaendigeStelle = "arp_npl_oereb_zustaendige_stelle"
         dbSchemaNutzungsplanung = "arp_npl"
+        dbSchemaAmtlicheVermessung = "agi_avdpool"
 
         iliModelBasis = 'OeREBKRM_V1_1'
         iliModelVorschriften = 'OeREBKRMvs_V1_1'
         iliModelTransferstruktur = 'OeREBKRMtrsfr_V1_1'
         iliModelNutzungsplanung = 'SO_Nutzungsplanung_20171118'
+        iliModelAmtlicheVermessung = 'DM01AVCH24LV95D'
 
         xtfOerebLandUsePlanFileName = "ch.so.arp.nutzungsplanung.oereb.xtf"
     }
