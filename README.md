@@ -28,7 +28,7 @@ gradle replaceCantonalLandUsePlansData
 Importiert die Nutzungsplanungsdaten im kantonalen Modell (liegen auf AWS S3).
 
 ```
-gradle replaceCadastralSurveying
+gradle replaceCadastralSurveyingData
 ```
 
 Importiert die Daten der amtlichen Vermessung.
