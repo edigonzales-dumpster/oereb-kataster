@@ -192,3 +192,83 @@ task replaceCantonalLandUsePlansData() {
 replaceCantonalLandUsePlansData.dependsOn {
     tasks.findAll { task -> task.name.startsWith('replaceCantonalLandUsePlansData_') }
 }
+
+// Herunterladen der amtlichen Vermessung
+cadastralSurveyingDataSets.each { cadastralSurveyingDataSet ->
+    def dataSet = cadastralSurveyingDataSet.toString()
+    task "downloadCadastralSurveyingData_$dataSet"(type: Download) {
+        group = GROUP_DATA_IMPORT
+        src cadastralSurveyingBaseUrl + "ch_" + dataSet + "00.zip"
+        dest pathToTempFolder
+        overwrite true
+
+        doLast {
+            println "File downloaded to: " + pathToTempFolder
+        }        
+    }
+}
+
+task downloadCadastralSurveyingData() {
+    description = "Aggregationstask für Herunterladen sämtlicher AV-Daten."
+    group = GROUP_DATA_IMPORT
+    doLast {
+        println "All dynamic tasks were performed."
+    }
+}
+
+downloadCadastralSurveyingData.dependsOn {
+    tasks.findAll { task -> task.name.startsWith('downloadCadastralSurveyingData_') }
+}
+
+// Unzippen der Datensätz der amtlichen Vermessung
+cadastralSurveyingDataSets.each { cadastralSurveyingDataSet ->
+    def dataSet = cadastralSurveyingDataSet.toString()
+    task "unzipCadastralSurveyingData_$dataSet"(type: Copy, dependsOn: "downloadCadastralSurveyingData_$dataSet") {
+        group = GROUP_DATA_IMPORT
+        from zipTree(Paths.get(pathToTempFolder, "ch_"+dataSet+"00.zip"))
+        into file(pathToUnzipFolder)
+        include "**/*.itf"
+
+        doLast {
+            println "File unzipped to directory: " + pathToUnzipFolder
+        }        
+    }
+}
+
+task unzipCadastralSurveyingData() {
+    description = "Aggregationstask für Unzippen sämtlicher Datensätze der amtlichen Vermessung"
+    group = GROUP_DATA_IMPORT
+    doLast {
+        println "All dynamic tasks were performed."
+    }
+}
+
+unzipCadastralSurveyingData.dependsOn {
+    tasks.findAll { task -> task.name.startsWith('unzipCadastralSurveyingData_') }
+}
+
+// Importieren der amtlichen Vermessung
+cadastralSurveyingDataSets.each { cadastralSurveyingDataSet ->
+    def dataSet = cadastralSurveyingDataSet.toString()
+    task "replaceCadastralSurveyingData_$dataSet"(type: Ili2pgReplace, dependsOn: "unzipCadastralSurveyingData_$dataSet") {
+        group = GROUP_DATA_IMPORT
+        database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+        models = iliModelAmtlicheVermessung
+        dbschema = dbSchemaAmtlicheVermessung
+        dataFile = file(Paths.get(pathToUnzipFolder.toString(), "ch_" + dataSet + "00.itf"))
+        dataset = dataSet
+        disableValidation = true
+    }
+}
+
+task replaceCadastralSurveyingData() {
+    description = "Aggregationstask für Importieren/Ersetzen sämtlicher Daten der amtlichen Vermessung."
+    group = GROUP_DATA_IMPORT
+    doLast {
+        println "All dynamic tasks were performed."
+    }
+}
+
+replaceCadastralSurveyingData.dependsOn {
+    tasks.findAll { task -> task.name.startsWith('replaceCadastralSurveyingData_') }
+}
