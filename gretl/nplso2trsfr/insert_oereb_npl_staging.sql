@@ -231,7 +231,7 @@ transferstruktur_darstellungsdienst_grundnutzung AS (
   SELECT
     basket_nutzungsplanung.t_id AS t_basket,
     dataset_nutzungsplanung.datasetname AS t_datasetname,
-    'https://geo.so.ch/wms/ch.so.arp.npl.grundnutzung.oereb?SERVICE=WMS&REQUEST=GetMap/usw/usf' AS verweiswms
+    'https://geo.so.ch/wms/ch.so.arp.nutzungsplanung.grundnutzung.oereb?SERVICE=WMS&REQUEST=GetMap/usw/usf' AS verweiswms
   FROM
     basket_nutzungsplanung,
     dataset_nutzungsplanung
@@ -321,12 +321,39 @@ eigentumsbeschraenkung_grundnutzung_insert AS
     artcodeliste,
     rechtsstatus,
     publiziertab,
-    transferstruktur_darstellungsdienst_grundnutzung.t_id AS verweiswms,
+    transferstruktur_darstellungsdienst_grundnutzung.t_id AS darstellungsdienst,
     NULL::int AS zustaendigestelle
   FROM
     eigentumsbeschraenkung_grundnutzung,
     transferstruktur_darstellungsdienst_grundnutzung
   RETURNING * 
+)
+,
+-- 'symbol' and 'legendetext_de' will be updated in a post script.
+transferstruktur_legendeeintrag AS (
+  INSERT INTO arp_npl_oereb.transferstruktur_legendeeintrag (
+    t_basket,
+    t_datasetname,
+    t_seq,
+    artcode,
+    artcodeliste,
+    thema,
+    subthema,
+    transfrstrkstllngsdnst_legende
+  )
+  SELECT DISTINCT ON (artcode)
+    eigentumsbeschraenkung_grundnutzung.t_basket,
+    eigentumsbeschraenkung_grundnutzung.t_datasetname,
+    0::int AS t_seq,
+    eigentumsbeschraenkung_grundnutzung.artcode,
+    eigentumsbeschraenkung_grundnutzung.artcodeliste,
+    eigentumsbeschraenkung_grundnutzung.thema,
+    eigentumsbeschraenkung_grundnutzung.subthema,
+    transferstruktur_darstellungsdienst_grundnutzung.t_id AS darstellungsdienst -- foreign key auf wms
+  FROM
+    eigentumsbeschraenkung_grundnutzung,
+    transferstruktur_darstellungsdienst_grundnutzung
+  RETURNING *
 )
 ,
 transferstruktur_hinweisvorschrift_grundnutzung AS (
@@ -413,7 +440,7 @@ transferstruktur_darstellungsdienst_ueberlagernd_flaeche AS (
   SELECT
     basket_nutzungsplanung.t_id AS t_basket,
     dataset_nutzungsplanung.datasetname AS t_datasetname,
-    'https://geo.so.ch/wms/ch.so.arp.npl.ueberlagernd_flaeche.oereb?SERVICE=WMS&REQUEST=GetMap/usw/usf' AS verweiswms
+    'https://geo.so.ch/wms/ch.so.arp.nutzungsplanung.ueberlagernd_flaeche.oereb?SERVICE=WMS&REQUEST=GetMap/usw/usf' AS verweiswms
   FROM
     basket_nutzungsplanung,
     dataset_nutzungsplanung
@@ -482,7 +509,7 @@ eigentumsbeschraenkung_ueberlagernd_flaeche_insert AS
     artcodeliste,
     rechtsstatus,
     publiziertab,
-    transferstruktur_darstellungsdienst_ueberlagernd_flaeche.t_id AS verweiswms,
+    transferstruktur_darstellungsdienst_ueberlagernd_flaeche.t_id AS darstellungsdienst,
     NULL::int
   FROM
     eigentumsbeschraenkung_ueberlagernd_flaeche,
@@ -574,7 +601,7 @@ transferstruktur_darstellungsdienst_ueberlagernd_linie AS (
   SELECT
     basket_nutzungsplanung.t_id AS t_basket,
     dataset_nutzungsplanung.datasetname AS t_datasetname,
-    'https://geo.so.ch/wms/ch.so.arp.npl.ueberlagernd_linie.oereb?SERVICE=WMS&REQUEST=GetMap/usw/usf' AS verweiswms
+    'https://geo.so.ch/wms/ch.so.arp.nutzungsplanung.ueberlagernd_linie.oereb?SERVICE=WMS&REQUEST=GetMap/usw/usf' AS verweiswms
   FROM
     basket_nutzungsplanung,
     dataset_nutzungsplanung
@@ -641,7 +668,7 @@ eigentumsbeschraenkung_ueberlagernd_linie_insert AS
     artcodeliste,
     rechtsstatus,
     publiziertab,
-    transferstruktur_darstellungsdienst_ueberlagernd_linie.t_id AS verweiswms,
+    transferstruktur_darstellungsdienst_ueberlagernd_linie.t_id AS darstellungsdienst,
     NULL::int
   FROM
     eigentumsbeschraenkung_ueberlagernd_linie,
@@ -733,7 +760,7 @@ transferstruktur_darstellungsdienst_ueberlagernd_punkt AS (
   SELECT
     basket_nutzungsplanung.t_id AS t_basket,
     dataset_nutzungsplanung.datasetname AS t_datasetname,
-    'https://geo.so.ch/wms/ch.so.arp.npl.ueberlagernd_punkt.oereb?SERVICE=WMS&REQUEST=GetMap/usw/usf' AS verweiswms
+    'https://geo.so.ch/wms/ch.so.arp.nutzungsplanung.ueberlagernd_punkt.oereb?SERVICE=WMS&REQUEST=GetMap/usw/usf' AS verweiswms
   FROM
     basket_nutzungsplanung,
     dataset_nutzungsplanung
@@ -800,7 +827,7 @@ eigentumsbeschraenkung_ueberlagernd_punkt_insert AS
     artcodeliste,
     rechtsstatus,
     publiziertab,
-    transferstruktur_darstellungsdienst_ueberlagernd_punkt.t_id AS verweiswms,
+    transferstruktur_darstellungsdienst_ueberlagernd_punkt.t_id AS darstellungsdienst,
     NULL::int AS zustaendigestelle
   FROM
     eigentumsbeschraenkung_ueberlagernd_punkt,

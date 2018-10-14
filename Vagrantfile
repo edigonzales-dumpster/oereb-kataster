@@ -143,5 +143,6 @@ Vagrant.configure("2") do |config|
     sudo chown -R vagrant /usr/local/geoserver/
     cp /vagrant/vagrant/geoserver /etc/init.d/geoserver
     sudo chmod +x /etc/init.d/geoserver
+    sudo update-rc.d geoserver defaults
     SHELL
 end
