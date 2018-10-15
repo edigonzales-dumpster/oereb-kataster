@@ -1,0 +1,1 @@
+java -jar /Users/stefan/apps/ili2pg-3.12.2/ili2pg-3.12.2.jar --dbhost 192.168.50.8 --dbdatabase oereb --dbusr ddluser --dbpwd ddluser --nameByTopic --sqlEnableNull --modeldir ".;http://models.geo.admin.ch" --models SO_AGI_OEREB_Auszug_Annex_20181015 --dbschema fubar1 --schemaimport

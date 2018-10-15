@@ -1,0 +1,117 @@
+INTERLIS 2.3;
+
+/** !!------------------------------------------------------------------------------
+ * !! Version    | wer | Änderung
+ * !!------------------------------------------------------------------------------
+ * !! 2018-10-15 | SZ  | Initialversion
+ */
+!!@ technicalContact=mailto:agi@bd.so.ch
+MODEL SO_AGI_OEREB_Auszug_Annex_20181015 (de)
+AT "http://www.geo.so.ch/models/AGI"
+VERSION "2018-10-15"  =
+  IMPORTS GeometryCHLV95_V1,CHAdminCodes_V1,OeREBKRM_V1_1,LocalisationCH_V1;
+
+  TOPIC KatasterAuszugAnnex =
+
+    /** Eine organisatorische Einheit innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasisdaten zuständige Stelle.
+     */
+    STRUCTURE Amt =
+      /** Name des Amtes z.B. "Amt für Gemeinden und Raumordnung des Kantons Bern".
+       */
+      Name : MANDATORY LocalisationCH_V1.MultilingualText;
+      /** Verweis auf die Website des Amtes z.B. "http://www.jgk.be.ch/jgk/de/index/direktion/organisation/agr.html".
+       */
+      AmtImWeb : OeREBKRM_V1_1.WebReferenz;
+      /** UID der organisatorischen Einheit
+       */
+      UID : OeREBKRM_V1_1.UID;
+      /** optionale zusätzliche Adresszeile
+       */
+      Zeile1 : TEXT*80;
+      /** optionale zusätzliche Adresszeile
+       */
+      Zeile2 : TEXT*80;
+      /** Strasse
+       */
+      Strasse : TEXT*100;
+      /** Hausnummer
+       */
+      Hausnr : TEXT*7;
+      /** 4-stellige Postleitzahl
+       */
+      PLZ : TEXT*4;
+      /** Postalischer Ort
+       */
+      Ort : TEXT*60;
+    END Amt;
+
+    /** Ein Eintrag im Glossar
+     */
+    STRUCTURE Glossar =
+      /** Begriff
+       */
+      Titel : MANDATORY LocalisationCH_V1.MultilingualText;
+      /** Erklärung
+       */
+      Inhalt : MANDATORY LocalisationCH_V1.MultilingualMText;
+    END Glossar;
+
+    /** Zusätzliche Informationen zu einer Gemeinde, insbesondere Gemeindelogo und Anschrift.
+     */
+    CLASS Gemeinde
+    EXTENDS Amt =
+      /** Logo der Gemeinde im PNG-Format mit 300dpi oder im SVG-Format
+       */
+      Logo : MANDATORY BLACKBOX BINARY;
+      /** BFS-Nummer der Gemeinde
+       */
+      BFSNr : MANDATORY CHAdminCodes_V1.CHMunicipalityCode;
+    END Gemeinde;
+
+    /** Spezifischer Haftungsausschluss Text.
+     */
+    STRUCTURE Haftungsausschluss =
+      /** Titel zum Haftungsausschluss
+       */
+      Titel : MANDATORY LocalisationCH_V1.MultilingualText;
+      /** Text zum Haftungsausschluss
+       */
+      Inhalt : MANDATORY LocalisationCH_V1.MultilingualMText;
+    END Haftungsausschluss;
+
+    /** Enthält Informationen für die Erstellung des Katasterauszuges, die nicht bereits in der Transfermodellstruktur vorhanden sind. Angelehnt an das offizielle Auszugsmodell (das jedoch konkret einen Auszug beschreibt).
+     */
+    CLASS Auszug =
+      /** Liste der OEREB-Themen, zu denen noch keine Daten vorhanden sind
+       */
+      ThemaOhneDaten : BAG {0..*} OF OeREBKRM_V1_1.Thema_;
+      /** Logo des OEREBK im PNG-Format mit 300dpi oder im SVG-Format
+       */
+      LogoOEREBK : MANDATORY BLACKBOX BINARY;
+      /** Logo des Bundes im PNG-Format mit 300dpi oder im SVG-Format
+       */
+      LogoBund : MANDATORY BLACKBOX BINARY;
+      /** Logo des Kantons im PNG-Format mit 300dpi oder im SVG-Format
+       */
+      LogoKanton : MANDATORY BLACKBOX BINARY;
+      /** Allgemeine Information gemäss. Textvorgabe in Weisung "Statischer Auszug"
+       */
+      AllgemeineInformation : LocalisationCH_V1.MultilingualMText;
+      /** Liste der verwendeten Grundlagedaten
+       */
+      Grundlagedaten : MANDATORY LocalisationCH_V1.MultilingualMText;
+      /** Text Haftungsausschuss
+       */
+      Haftungsausschluss : BAG {0..*} OF SO_AGI_OEREB_Auszug_Annex_20181015.KatasterAuszugAnnex.Haftungsausschluss;
+      /** Glossar
+       */
+      Glossar : BAG {0..*} OF SO_AGI_OEREB_Auszug_Annex_20181015.KatasterAuszugAnnex.Glossar;
+      /** Katasterführende Stelle
+       */
+      KatasterFuehrendeStelle : MANDATORY SO_AGI_OEREB_Auszug_Annex_20181015.KatasterAuszugAnnex.Amt;
+      
+    END Auszug;
+
+  END KatasterAuszugAnnex;
+
+END SO_AGI_OEREB_Auszug_Annex_20181015.
