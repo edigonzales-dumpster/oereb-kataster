@@ -18,6 +18,7 @@ allprojects{
         dbPwdOereb = "ddluser"
 
         dbSchemaOereb = "agi_oereb"
+        dbSchemaOerebAuszugAnnex = "agi_oereb_azg_ann"
         dbSchemaOerebNutzungsplanung = "arp_npl_oereb"
         dbSchemaOerebNutzungsplanungZustaendigeStelle = "arp_npl_oereb_zustaendige_stelle"
         dbSchemaNutzungsplanung = "arp_npl"
@@ -26,6 +27,7 @@ allprojects{
         iliModelBasis = 'OeREBKRM_V1_1'
         iliModelVorschriften = 'OeREBKRMvs_V1_1'
         iliModelTransferstruktur = 'OeREBKRMtrsfr_V1_1'
+        iliModelAuszugAnnex = 'SO_AGI_OEREB_Auszug_Annex_20181015'
         iliModelNutzungsplanung = 'SO_Nutzungsplanung_20171118'
         iliModelAmtlicheVermessung = 'DM01AVCH24LV95D'
 

@@ -63,3 +63,4 @@ Exportiert die Nutzungsplanungsdaten in die Transferstruktur (nur Nutzungsplanun
 - Notfalls könnte man auch noch _nachträglich_ z.B. Typen/Eigentumsbeschränkungen (inkl. Dokumente) entfernen, an diese keine Geometrie angehängt ist.
 - Was sint "keine Geometrie+Darstellung nur zulässig bei Grundlage-Eigentumsbeschränkungen" Grundlage-Eigentumsbeschränkungen
 - KO-Modell... Lieferungen
+- Aufzähltypen Thema: Update Displayname für Leerzeichen einfügen damit man sie für Auszug verwenden kann. Oder braucht es das nicht? Woher kommen im Auszug die schönen (mit Leeerzeichen) Namen?
