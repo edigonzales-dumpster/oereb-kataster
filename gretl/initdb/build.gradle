@@ -4,6 +4,11 @@ plugins {
 
 import ch.so.agi.gretl.tasks.*
 import ch.so.agi.gretl.api.TransferSet
+import java.nio.file.Paths
+
+// Export-Verzeichnis
+def pathToTempFolder = System.getProperty("java.io.tmpdir")
+def pathToExportFolder = Paths.get(pathToTempFolder, 'export_data')
 
 def GROUP_INIT_DB = "Initialisierung Datenbank"
 
@@ -75,6 +80,17 @@ task createDataOerebAuszugAnnex(type: SqlExecutor) {
     group = GROUP_INIT_DB
     database = [dbUriOereb, dbUserOereb, dbPwdOereb]
     sqlFiles = ["createOerebAuszugAnnex.sql"]
+}
+
+task exportDataOerebAuszugAnnex(type: Ili2pgExport) {
+    description = "Export die Auszugsannex-Daten."
+    group = GROUP_INIT_DB
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelAuszugAnnex
+    modeldir = "../models/;http://models.geo.admin.ch" // TODO: temporär
+    dbschema = dbSchemaOerebAuszugAnnex
+    dataFile = file(Paths.get(pathToExportFolder.toString(), "ch.so.agi.oereb.auszug.annex.xtf"))
+    disableValidation = true
 }
 
 task createSchemaOerebNutzungsplanung(type: Ili2pgImportSchema) {
