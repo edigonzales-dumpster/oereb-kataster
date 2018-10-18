@@ -52,6 +52,16 @@ xmllint --format ch.so.arp.nutzungsplanung.oereb.xtf -o ch.so.arp.nutzungsplanun
 ```
 Exportiert die Nutzungsplanungsdaten in die Transferstruktur (nur Nutzungsplanungs-Dataset, dh. ohne die gesetzlichen Grundlagen).
 
+## Web service
+
+### Requests
+
+```
+http://localhost:8888/oereb/getegrid/xml/?XY=2598098,1225627
+```
+
+
+
 **TODO:** 
 - Wann verweist etwas auf die gesetzliche Grundlage? Wann auf PBG, wann auf KBV?
 - ArtCode: 40 Zeichen gemäss Modell. Reicht nicht für unsere Aufzähltypen -> Nur die ersten vier Zeichen NXXX?
