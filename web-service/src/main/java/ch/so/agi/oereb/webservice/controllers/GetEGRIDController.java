@@ -29,7 +29,6 @@ public class GetEGRIDController {
             @PathVariable("format") String format,
             @RequestParam(value = "XY") String xy) {
                 
-        
         double[] coords = validateCoordinateRequestParam(xy);
         /*
         GetEGRIDResponseType getEGRIDResponseType = egridEntityService.getGetEGRIDResponseTypeByXY(coords[0], coords[1]);
