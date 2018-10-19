@@ -27,8 +27,8 @@ repositories {
 
 
 dependencies {
-	//implementation('org.springframework.boot:spring-boot-starter-jdbc')
-	implementation('org.springframework.boot:spring-boot-starter-web')
+	implementation('org.springframework.boot:spring-boot-starter-jdbc')
+    implementation('org.springframework.boot:spring-boot-starter-web')    
     runtimeOnly('org.springframework.boot:spring-boot-devtools')
     runtimeOnly('org.springframework.boot:spring-boot-starter-actuator')
 	runtimeOnly('org.postgresql:postgresql')
@@ -37,4 +37,23 @@ dependencies {
 
 bootJar {
     launchScript()
+}
+
+sourceSets {
+    generated {
+        java {
+            srcDir 'src/generated/java'
+        }
+        resources {
+            srcDir 'src/generated/resources'
+        }
+    }
+    main {
+        compileClasspath += generated.output
+        runtimeClasspath += generated.output
+    }   
+    test {
+        compileClasspath += generated.output
+        runtimeClasspath += generated.output
+    }
 }

@@ -136,13 +136,13 @@ task importCantonalLegalBasisToOerebNutzungsplanung(type: Ili2pgImport) {
 }
 
 task importResponsibleOfficesToOerebNutzungsplanung(type: Ili2pgImport) {
-    description = "Importiert ch.so.arp.npl.zustaendigestelle.xml."
+    description = "Importiert ch.so.arp.npl.zustaendigestelle.xtf."
     group = GROUP_INIT_DB
     database = [dbUriOereb, dbUserOereb, dbPwdOereb]
     //models = iliModelVorschriften
     models = iliModelTransferstruktur
     dbschema = dbSchemaOerebNutzungsplanung
-    dataFile = "../../data/ch.so.sk/ch.so.arp.npl.zustaendigestelle.xtf"
+    dataFile = "../../data/ch.so.arp/ch.so.arp.npl.zustaendigestelle.xtf"
     dataset = "ch.so.arp.nutzungsplanung" // Gleiches Dataset wie anschliessend die Daten des Datenumbaues, da Ämterinformationen Bestandteil des Transfers sein sollen.
     disableValidation = true
 }

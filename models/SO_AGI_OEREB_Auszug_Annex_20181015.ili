@@ -56,6 +56,30 @@ VERSION "2018-10-15"  =
       Inhalt : MANDATORY LocalisationCH_V1.MultilingualMText;
     END Glossar;
 
+    /** Liste mit den Themen und ihren englischen Übersetzungen und ob zum Thema überhaupt Daten vorhanden sind.
+     */
+    CLASS KatasterThema =
+      Thema : MANDATORY OeREBKRM_V1_1.Thema;
+      /** Englische Übersetzung des Themas.
+       */
+      Thema_en : MANDATORY TEXT;
+      /** Sind Daten zu diesem Thema vorhanden?
+       */
+      Daten_vorhanden : MANDATORY BOOLEAN;
+      /** Name für Auszug
+       */
+      Displayname : TEXT;
+    END KatasterThema;
+
+    /** Subthema (z.B. Grundnutzung)
+     */
+    CLASS Subthema =
+      Name : MANDATORY TEXT*60;
+      /** Name für XML-Auszug
+       */
+      Displayname : TEXT;
+    END Subthema;
+
     /** Zusätzliche Informationen zu einer Gemeinde, insbesondere Gemeindelogo und Anschrift.
      */
     CLASS Gemeinde
@@ -79,10 +103,15 @@ VERSION "2018-10-15"  =
       Inhalt : MANDATORY LocalisationCH_V1.MultilingualMText;
     END Haftungsausschluss;
 
+    ASSOCIATION KatasterThema_Subthema =
+      r_Subthema -- {0..*} Subthema;
+      r_KatasterThema -<#> {1} KatasterThema;
+    END KatasterThema_Subthema;
+
     /** Enthält Informationen für die Erstellung des Katasterauszuges, die nicht bereits in der Transfermodellstruktur vorhanden sind. Angelehnt an das offizielle Auszugsmodell (das jedoch konkret einen Auszug beschreibt).
      */
     CLASS Auszug =
-      /** Liste der OEREB-Themen, zu denen noch keine Daten vorhanden sind
+      /** **Deprecated** Liste der OEREB-Themen, zu denen noch keine Daten vorhanden sind
        */
       ThemaOhneDaten : BAG {0..*} OF OeREBKRM_V1_1.Thema_;
       /** Logo des OEREBK im PNG-Format mit 300dpi oder im SVG-Format

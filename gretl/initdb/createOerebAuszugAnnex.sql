@@ -22,29 +22,6 @@ WITH auszug AS (
   RETURNING *
 )
 ,
-themen_keine_daten AS (
-  INSERT INTO agi_oereb_azg_ann.thema_
-  (
-    t_seq,
-    avalue,
-    katasterauszgnnex_szug_themaohnedaten
-  )
-  SELECT
-    0 AS t_seq,
-    'BaulinienNationalstrassen' AS avalue,
-    auszug.t_id AS katasterauszgnnex_szug_themaohnedaten
-  FROM
-    auszug
-  UNION ALL
-  SELECT
-    1 AS t_seq,
-    'BelasteteStandorteMilitaer' AS avalue,
-    auszug.t_id AS katasterauszgnnex_szug_themaohnedaten
-  FROM
-    auszug
-  RETURNING *
-)
-,
 kvs AS (
   INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_amt
   (
@@ -148,4 +125,302 @@ SELECT
   'Entenhausen' AS ort
 FROM
   gemeinden
+;
+
+DELETE FROM agi_oereb_azg_ann.katasterauszgnnex_subthema;
+DELETE FROM agi_oereb_azg_ann.katasterauszgnnex_katasterthema;
+
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'Nutzungsplanung',
+  'Nutzungsplanung',  
+  'LandUsePlans',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'ProjektierungszonenNationalstrassen',
+  'Projektierungszonen Nationalstrassen',
+  'MotorwaysProjectPlaningZones',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'BaulinienNationalstrassen',
+  'Baulinien Nationalstrassen',
+  'MotorwaysBuildingLines',
+  FALSE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'ProjektierungszonenEisenbahnanlagen',
+  'Projektierungszonen Eisenbahnanlagen',
+  'RailwaysProjectPlanningZones',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'BaulinienEisenbahnanlagen',
+  'Baulinien Eisenbahnanlagen',
+  'RailwaysBuildingLines',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'ProjektierungszonenFlughafenanlagen',
+  'Projektierungszonen Flughafenanlagen',
+  'AirportsProjectPlanningZones',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'BaulinienFlughafenanlagen',
+  'Baulinien Flughafenanlagen',
+  'AirportsBuildingLines',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'SicherheitszonenplanFlughafen',
+  'Sicherheitszonenplan Flughafen',
+  'AirportsSecurityZonePlans',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'BelasteteStandorte',
+  'Belastete Standorte',
+  'ContaminatedSites',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'BelasteteStandorteMilitaer',
+  'Belastete Standorte Militaer',
+  'ContaminatedMilitarySites',
+  FALSE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'BelasteteStandorteZivileFlugplaetze',
+  'Belastete Standorte Zivile Flugplaetze',
+  'ContaminatedCivilAviationSites',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'BelasteteStandorteOeffentlicherVerkehr',
+  'Belastete Standorte Oeffentlicher Verkehr',
+  'ContaminatedPublicTransportSites',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'Grundwasserschutzzonen',
+  'Grundwasserschutzzonen',
+  'GroundwaterProtectionZones',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'Grundwasserschutzareale',
+  'Grundwasserschutzareale',
+  'GroundwaterProtectionSites',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'Laermemfindlichkeitsstufen',
+  'Laermemfindlichkeitsstufen',
+  'NoiseSensitivityLevels',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'Waldgrenzen',
+  'Waldgrenzen',
+  'ForestPerimeters',
+  TRUE
+)
+;
+INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
+  thema,
+  displayname,
+  thema_en,
+  daten_vorhanden
+)
+VALUES (
+  'Waldabstandslinien',
+  'Waldabstandslinien',
+  'ForestDistanceLines',
+  TRUE
+)
+;
+WITH nutzungsplanungs_thema AS (
+  SELECT
+    t_id
+  FROM
+    agi_oereb_azg_ann.katasterauszgnnex_katasterthema
+  WHERE
+    thema = 'Nutzungsplanung'
+)
+,
+subthema_grundnutzung AS (
+  INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_subthema (
+    aname,
+    displayname,
+    r_katasterthema
+  )
+  SELECT
+    'Grundnutzung',
+    'Grundnutzung',
+    nutzungsplanungs_thema.t_id
+  FROM
+    nutzungsplanungs_thema
+  RETURNING *
+)
+,
+subthema_ueberlagernd_flaeche AS (
+  INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_subthema (
+    aname,
+    displayname,
+    r_katasterthema
+  )
+  SELECT
+    'Ueberlagernde_Festlegung',
+    'Ueberlagernde Festlegung',
+    nutzungsplanungs_thema.t_id
+  FROM
+    nutzungsplanungs_thema
+  RETURNING *
+)
+,
+subthema_ueberlagernd_linie AS (
+  INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_subthema (
+    aname,
+    displayname,
+    r_katasterthema
+  )
+  SELECT
+    'Linienbezogene_Festlegung',
+    'Linienbezogene Festlegung',
+    nutzungsplanungs_thema.t_id
+  FROM
+    nutzungsplanungs_thema
+  RETURNING *
+)
+,
+subthema_ueberlagernd_punkt AS (
+  INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_subthema (
+    aname,
+    displayname,
+    r_katasterthema
+  )
+  SELECT
+    'Objektbezogene_Festlegung',
+    'Objektbezogene Festlegung',
+    nutzungsplanungs_thema.t_id
+  FROM
+    nutzungsplanungs_thema
+  RETURNING *
+)
+SELECT
+  *
+FROM
+  subthema_grundnutzung
 ;

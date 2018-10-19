@@ -39,6 +39,7 @@ def layerName = "ch.so.arp.nutzungsplanung.grundnutzung.oereb"
 
 def sldFile = new File(layerName+".sld")
 sldFile.newWriter()
+//println baseUrl + "&SERVICE=WMS&REQUEST=GetStyles&LAYERS=" + layerName + "&SLD_VERSION=1.1.0"
 sldFile << new URL(baseUrl + "&SERVICE=WMS&REQUEST=GetStyles&LAYERS=" + layerName + "&SLD_VERSION=1.1.0").getText()
 
 def xml = new XmlSlurper().parse(layerName+".sld")
@@ -61,11 +62,11 @@ xml.NamedLayer.UserStyle.FeatureTypeStyle.Rule.each { rule ->
 
     // Grösse des Images plusminus berechnet für die 300 dpi. (WMS-Spec ist circa 90 dpi).
     //def legendGraphicUrl = baseUrl + "&SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=" + layerName + "&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&RULE=" + encodedRuleName + "&HEIGHT=70&WIDTH=94&SYMBOLHEIGHT=6&SYMBOLWIDTH=8&DPI=300" 
-    def legendGraphicUrl = baseUrl + "&SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=" + layerName + "&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&RULE=" + encodedRuleName + "&HEIGHT=35&WIDTH=63&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" 
+    def legendGraphicUrl = baseUrl + "&SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=" + layerName + "&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&RULE=" + encodedRuleName + "&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" 
     println legendGraphicUrl
 
 
-  /*    
+      
     try {
         def fileName = ruleName.toString().replaceAll(" ","_").replaceAll("/","-") + "_" + artCode + ".png"
         def iconFile = new File(fileName).newOutputStream()
@@ -78,7 +79,7 @@ xml.NamedLayer.UserStyle.FeatureTypeStyle.Rule.each { rule ->
     } catch (java.io.FileNotFoundException e) {
         println e.getMessage()
     }
-    */
+    
     println "******"   
 }
 

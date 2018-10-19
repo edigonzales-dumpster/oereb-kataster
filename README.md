@@ -58,7 +58,19 @@ Exportiert die Nutzungsplanungsdaten in die Transferstruktur (nur Nutzungsplanun
 
 ```
 http://localhost:8888/oereb/getegrid/xml/?XY=2598098,1225627
+http://localhost:8888/oereb/extract/reduced/xml/geometry/CH870672603279
+http://localhost:8888/oereb/extract/reduced/xml/CH870672603279
 ```
+
+### Jaxb
+
+```
+xjc Extract.xsd -extension -b globalBindings.xjb -b gml-v_3_2_1.xjb -b iso19139-v_20070417.ignore.xjb -b xlink.xjb -Xinject-code
+```
+
+Noch ist Extract.xsd leicht angepasst, dh. "xmldsig" auskommentiert. In der Klasse generierten Klasse net.opengis.gml.v_3_2_1.GenericMetaDataType wird ebenfalls ein Fehler gemeldet: nicht mehr Java 1.8 tauglich. Das habe ich einfach auskommentiert.
+
+Irgendwo ist/war noch der Hund begraben: Es gab keinen richtigen XML-Ouput. Ich habe jetzt einfach die Java-Jaxb-Klassen aus dem alten Projekt kopiert.
 
 
 
