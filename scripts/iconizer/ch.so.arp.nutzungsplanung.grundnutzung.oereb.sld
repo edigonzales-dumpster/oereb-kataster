@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se" version="1.1.0" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd">
  <NamedLayer>
   <se:Name>ch.so.arp.nutzungsplanung.grundnutzung.oereb</se:Name>
   <UserStyle>
@@ -21,28 +21,6 @@
       <se:Fill>
        <se:SvgParameter name="fill">#ffff00</se:SvgParameter>
       </se:Fill>
-     </se:PolygonSymbolizer>
-    </se:Rule>
-    <se:Rule>
-     <se:Name>aaaa</se:Name>
-     <se:Description>
-      <se:Title>aaaa</se:Title>
-     </se:Description>
-     <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
-      <ogc:PropertyIsEqualTo>
-       <ogc:PropertyName>t_id</ogc:PropertyName>
-       <ogc:Literal>7783</ogc:Literal>
-      </ogc:PropertyIsEqualTo>
-     </ogc:Filter>
-     <se:PolygonSymbolizer>
-      <se:Fill>
-       <se:SvgParameter name="fill">#828de0</se:SvgParameter>
-      </se:Fill>
-      <se:Stroke>
-       <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-       <se:SvgParameter name="stroke-width">1</se:SvgParameter>
-       <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
-      </se:Stroke>
      </se:PolygonSymbolizer>
     </se:Rule>
     <se:Rule>

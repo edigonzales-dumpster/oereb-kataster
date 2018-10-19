@@ -7,32 +7,11 @@ import groovy.sql.*
 import java.net.URLEncoder
 import java.nio.file.Files
 
-def dbUrl = "jdbc:postgresql://192.168.50.8/oereb"
+def dbUrl = "jdbc:postgresql://192.168.50.8/edit"
 def dbUser = "ddluser"
 def dbPassword = "ddluser"
 def dbDriver = "org.postgresql.Driver"
-
 def sql = Sql.newInstance(dbUrl, dbUser, dbPassword, dbDriver)
-/*
-// Muss generischer werden (`subthema`)
-// Resp. vielleicht kann gejoined werden via "darstellungsdienst".
-def stmt = """
-SELECT DISTINCT
-  artcode
-FROM
-  arp_npl_oereb.transferstruktur_legendeeintrag
-WHERE
-  subthema = 'Grundnutzung_Zonenflaeche'
-ORDER BY
-  artcode
-;
-"""
-
-sql.eachRow(stmt) { row ->
-    println row["artcode"]
-}
-*/
-
 
 def baseUrl = "http://192.168.50.8/cgi-bin/qgis_mapserv.fcgi?map=/vagrant/qgis/wms/ch.so.arp.nutzungsplanung.oereb.qgs"
 def layerName = "ch.so.arp.nutzungsplanung.grundnutzung.oereb"
@@ -65,8 +44,6 @@ xml.NamedLayer.UserStyle.FeatureTypeStyle.Rule.each { rule ->
     def legendGraphicUrl = baseUrl + "&SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=" + layerName + "&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&RULE=" + encodedRuleName + "&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" 
     println legendGraphicUrl
 
-
-      
     try {
         def fileName = ruleName.toString().replaceAll(" ","_").replaceAll("/","-") + "_" + artCode + ".png"
         def iconFile = new File(fileName).newOutputStream()
@@ -79,11 +56,7 @@ xml.NamedLayer.UserStyle.FeatureTypeStyle.Rule.each { rule ->
     } catch (java.io.FileNotFoundException e) {
         println e.getMessage()
     }
-    
     println "******"   
 }
-
-
-
 sql.close()
 

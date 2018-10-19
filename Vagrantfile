@@ -98,6 +98,14 @@ Vagrant.configure("2") do |config|
     sudo -u postgres psql -d oereb -c 'GRANT SELECT ON geography_columns TO dmluser;'
     sudo -u postgres psql -d oereb -c 'GRANT SELECT ON raster_columns TO dmluser;'
     sudo -u postgres psql -d oereb -c "ALTER DATABASE oereb SET postgis.gdal_enabled_drivers TO 'GTiff PNG JPEG';"
+    sudo -u postgres psql -d postgres -c "CREATE DATABASE edit WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'en_US.UTF-8' LC_CTYPE = 'en_US.UTF-8' OWNER ddluser;"
+    sudo -u postgres psql -d edit -c 'CREATE EXTENSION postgis;'
+    sudo -u postgres psql -d edit -c 'CREATE EXTENSION "uuid-ossp";'
+    sudo -u postgres psql -d edit -c 'GRANT SELECT ON geometry_columns TO dmluser;'
+    sudo -u postgres psql -d edit -c 'GRANT SELECT ON spatial_ref_sys TO dmluser;'
+    sudo -u postgres psql -d edit -c 'GRANT SELECT ON geography_columns TO dmluser;'
+    sudo -u postgres psql -d edit -c 'GRANT SELECT ON raster_columns TO dmluser;'
+    sudo -u postgres psql -d edit -c "ALTER DATABASE edit SET postgis.gdal_enabled_drivers TO 'GTiff PNG JPEG';"
     sudo -u postgres psql -d postgres -f /vagrant/vagrant/create_roles.sql
     sudo -u postgres psql -d postgres -c 'ALTER USER ddluser WITH SUPERUSER;'
     systemctl stop postgresql

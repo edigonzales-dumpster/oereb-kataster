@@ -1,0 +1,3 @@
+rootProject.name = 'oerebk-dev'
+include 'azg_annex'
+include 'nplso_responsible_office'

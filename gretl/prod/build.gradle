@@ -1,0 +1,67 @@
+allprojects {
+    buildscript {
+        repositories {
+            mavenLocal()      
+            maven {
+                url "http://jars.interlis.ch"
+            }
+            maven {
+                url "http://download.osgeo.org/webdav/geotools/"
+            }
+            mavenCentral()
+            jcenter()
+        }  
+    }
+    ext {
+        dbUriOereb = "jdbc:postgresql://192.168.50.8:5432/oereb"
+        dbUserOereb = "ddluser"
+        dbPwdOereb = "ddluser"
+
+        dbUriEdit = "jdbc:postgresql://192.168.50.8:5432/edit"
+        dbUserEdit = "ddluser"
+        dbPwdEdit = "ddluser"
+
+        dbSchemaOereb = "agi_oereb"
+        dbSchemaOerebAuszugAnnex = "agi_oereb_azg_ann"
+        dbSchemaOerebNutzungsplanung = "arp_npl_oereb"
+        dbSchemaNutzungsplanung = "arp_npl"
+        dbSchemaAmtlicheVermessung = "agi_avdpool"
+
+        iliModelBasis = 'OeREBKRM_V1_1'
+        iliModelVorschriften = 'OeREBKRMvs_V1_1'
+        iliModelTransferstruktur = 'OeREBKRMtrsfr_V1_1'
+        iliModelAuszugAnnex = 'SO_AGI_OEREB_Auszug_Annex_20181015'
+        iliModelNutzungsplanung = 'SO_Nutzungsplanung_20171118'
+        iliModelAmtlicheVermessung = 'DM01AVCH24LV95D'
+
+        xtfOerebLandUsePlanFileName = "ch.so.arp.nutzungsplanung.oereb.xtf"
+    }
+}
+
+// Mit dieser leicht hässlichen Variante muss man das Plugin
+// nicht in jedem Subprojekt laden.
+// Warum man das Untenstehende nich in 'allprojects' packen
+// kann erschliesst sich mir nicht ganz.
+// Im 'dev'-Projekt ist noch die alte Variante.
+buildscript {
+    repositories {
+        mavenLocal()      
+        maven {
+            url "http://jars.interlis.ch"
+        }
+        maven {
+            url "http://download.osgeo.org/webdav/geotools/"
+        }
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "ch.so.agi:gretl:1.0.5-SNAPSHOT"
+    }
+}
+subprojects {
+    apply plugin: "ch.so.agi.gretl"     
+}

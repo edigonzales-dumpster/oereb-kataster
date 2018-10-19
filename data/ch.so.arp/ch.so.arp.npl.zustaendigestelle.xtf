@@ -1,50 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
-  <HEADERSECTION SENDER="ili2pg-3.12.3-SNAPSHOT-f6b79bfbc7556eb869a843878e1d64aec9d5d442" VERSION="2.3">
+  <HEADERSECTION SENDER="ili2pg-3.12.3-SNAPSHOT-3b246b201fe20d0cd39a49ef5c82c42a1f99fed6" VERSION="2.3">
     <MODELS>
-      <MODEL NAME="CoordSys" VERSION="2015-11-24" URI="http://www.interlis.ch/models"/>
       <MODEL NAME="CatalogueObjects_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="CatalogueObjectTrees_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="Units" VERSION="2012-02-20" URI="http://www.interlis.ch/models"/>
+      <MODEL NAME="CoordSys" VERSION="2015-11-24" URI="http://www.interlis.ch/models"/>
       <MODEL NAME="InternationalCodes_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="Localisation_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="LocalisationCH_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="Dictionaries_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="DictionariesCH_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
-      <MODEL NAME="Units" VERSION="2012-02-20" URI="http://www.interlis.ch/models"/>
+      <MODEL NAME="GeometryCHLV03_V1" VERSION="2017-12-04" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="GeometryCHLV95_V1" VERSION="2017-12-04" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="CHAdminCodes_V1" VERSION="2018-02-19" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="AdministrativeUnits_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="AdministrativeUnitsCH_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="OeREBKRM_V1_1" VERSION="2016-08-15" URI="http://models.geo.admin.ch/V_D/OeREB/"/>
-      <MODEL NAME="GeometryCHLV03_V1" VERSION="2017-12-04" URI="http://www.geo.admin.ch"/>
-      <MODEL NAME="GeometryCHLV95_V1" VERSION="2017-12-04" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="OeREBKRMvs_V1_1" VERSION="2016-08-15" URI="http://models.geo.admin.ch/V_D/OeREB/"/>
       <MODEL NAME="OeREBKRMtrsfr_V1_1" VERSION="2016-08-15" URI="http://models.geo.admin.ch/V_D/OeREB/"/>
     </MODELS>
   </HEADERSECTION>
   <DATASECTION>
     <OeREBKRMtrsfr_V1_1.Transferstruktur BID="10001">
+      <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.sk">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Staatskanzlei</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>http://www.so.ch/staatskanzlei/</AmtImWeb>
+      </OeREBKRMvs_V1_1.Vorschriften.Amt>
       <OeREBKRMvs_V1_1.Vorschriften.Amt TID="ch.so.arp.npl.2622">
         <Name>
           <LocalisationCH_V1.MultilingualText>
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2622</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2622</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2622</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2622</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2622</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -60,22 +57,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2621</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2621</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2621</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2621</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2621</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -87,22 +68,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2620</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2620</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2620</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2620</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2620</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -118,22 +83,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2619</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2619</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2619</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2619</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2619</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -145,22 +94,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2618</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2618</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2618</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2618</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2618</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -176,22 +109,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2617</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2617</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2617</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2617</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2617</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -203,22 +120,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2616</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2616</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2616</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2616</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2616</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -234,22 +135,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2615</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2615</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2615</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2615</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2615</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -261,22 +146,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2614</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2614</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2614</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2614</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2614</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -292,22 +161,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2613</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2613</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2613</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2613</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2613</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -319,22 +172,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2612</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2612</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2612</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2612</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2612</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -350,22 +187,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2611</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2611</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2611</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2611</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2611</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -377,22 +198,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2601</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2601</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2601</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2601</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2601</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -408,22 +213,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2586</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2586</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2586</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2586</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2586</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -435,22 +224,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2585</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2585</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2585</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2585</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2585</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -466,22 +239,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2584</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2584</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2584</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2584</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2584</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -493,22 +250,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2583</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2583</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2583</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2583</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2583</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -524,22 +265,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2582</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2582</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2582</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2582</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2582</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -551,22 +276,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2581</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2581</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2581</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2581</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2581</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -582,22 +291,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2580</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2580</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2580</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2580</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2580</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -609,22 +302,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2579</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2579</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2579</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2579</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2579</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -640,22 +317,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2578</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2578</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2578</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2578</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2578</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -667,22 +328,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2576</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2576</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2576</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2576</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2576</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -698,22 +343,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2575</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2575</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2575</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2575</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2575</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -725,22 +354,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2574</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2574</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2574</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2574</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2574</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -756,22 +369,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2573</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2573</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2573</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2573</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2573</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -783,22 +380,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2572</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2572</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2572</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2572</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2572</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -814,22 +395,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2571</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2571</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2571</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2571</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2571</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -841,22 +406,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2556</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2556</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2556</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2556</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2556</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -872,22 +421,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2555</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2555</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2555</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2555</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2555</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -899,22 +432,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2554</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2554</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2554</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2554</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2554</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -930,22 +447,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2553</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2553</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2553</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2553</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2553</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -957,22 +458,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2551</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2551</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2551</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2551</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2551</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -988,22 +473,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2550</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2550</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2550</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2550</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2550</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1015,22 +484,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2549</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2549</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2549</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2549</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2549</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1046,22 +499,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2548</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2548</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2548</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2548</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2548</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1073,22 +510,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2547</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2547</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2547</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2547</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2547</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1104,22 +525,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2546</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2546</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2546</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2546</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2546</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1131,22 +536,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2545</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2545</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2545</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2545</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2545</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1162,22 +551,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2544</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2544</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2544</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2544</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2544</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1189,22 +562,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2543</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2543</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2543</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2543</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2543</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1220,22 +577,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2542</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2542</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2542</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2542</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2542</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1247,22 +588,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2541</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2541</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2541</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2541</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2541</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1278,22 +603,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2535</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2535</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2535</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2535</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2535</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1305,22 +614,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2534</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2534</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2534</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2534</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2534</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1336,22 +629,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2532</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2532</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2532</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2532</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2532</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1363,22 +640,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2530</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2530</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2530</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2530</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2530</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1394,22 +655,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2529</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2529</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2529</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2529</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2529</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1421,22 +666,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2528</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2528</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2528</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2528</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2528</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1452,22 +681,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2527</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2527</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2527</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2527</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2527</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1479,22 +692,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2526</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2526</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2526</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2526</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2526</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1510,22 +707,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2525</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2525</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2525</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2525</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2525</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1537,22 +718,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2524</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2524</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2524</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2524</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2524</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1568,22 +733,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2523</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2523</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2523</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2523</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2523</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1595,22 +744,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2520</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2520</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2520</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2520</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2520</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1626,22 +759,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2519</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2519</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2519</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2519</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2519</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1653,22 +770,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2518</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2518</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2518</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2518</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2518</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1684,22 +785,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2517</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2517</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2517</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2517</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2517</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1711,22 +796,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2516</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2516</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2516</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2516</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2516</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1742,22 +811,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2514</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2514</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2514</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2514</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2514</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1769,22 +822,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2513</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2513</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2513</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2513</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2513</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1800,22 +837,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2511</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2511</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2511</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2511</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2511</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1827,22 +848,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2503</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2503</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2503</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2503</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2503</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1858,22 +863,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2502</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2502</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2502</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2502</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2502</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1885,22 +874,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2501</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2501</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2501</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2501</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2501</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1916,22 +889,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2500</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2500</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2500</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2500</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2500</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -1943,22 +900,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2499</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2499</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2499</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2499</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2499</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1974,22 +915,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2498</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2498</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2498</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2498</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2498</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2001,22 +926,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2497</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2497</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2497</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2497</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2497</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2032,22 +941,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2495</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2495</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2495</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2495</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2495</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2059,22 +952,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2493</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2493</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2493</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2493</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2493</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2090,22 +967,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2492</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2492</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2492</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2492</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2492</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2117,22 +978,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2491</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2491</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2491</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2491</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2491</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2148,22 +993,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2481</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2481</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2481</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2481</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2481</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2175,22 +1004,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2480</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2480</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2480</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2480</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2480</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2206,22 +1019,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2479</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2479</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2479</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2479</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2479</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2233,22 +1030,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2478</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2478</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2478</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2478</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2478</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2264,22 +1045,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2477</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2477</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2477</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2477</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2477</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2291,22 +1056,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2476</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2476</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2476</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2476</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2476</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2322,22 +1071,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2475</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2475</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2475</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2475</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2475</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2349,22 +1082,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2474</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2474</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2474</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2474</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2474</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2380,22 +1097,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2473</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2473</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2473</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2473</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2473</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2407,22 +1108,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2472</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2472</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2472</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2472</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2472</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2438,22 +1123,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2471</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2471</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2471</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2471</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2471</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2465,22 +1134,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2465</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2465</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2465</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2465</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2465</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2496,22 +1149,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2464</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2464</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2464</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2464</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2464</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2523,22 +1160,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2463</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2463</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2463</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2463</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2463</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2554,22 +1175,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2461</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2461</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2461</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2461</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2461</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2581,22 +1186,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2457</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2457</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2457</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2457</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2457</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2612,22 +1201,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2456</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2456</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2456</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2456</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2456</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2639,22 +1212,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2455</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2455</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2455</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2455</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2455</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2670,22 +1227,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2445</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2445</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2445</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2445</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2445</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2697,22 +1238,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2429</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2429</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2429</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2429</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2429</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2728,22 +1253,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2428</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2428</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2428</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2428</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2428</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2755,22 +1264,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2427</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2427</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2427</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2427</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2427</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2786,22 +1279,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2426</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2426</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2426</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2426</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2426</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2813,22 +1290,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2425</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2425</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2425</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2425</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2425</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2844,22 +1305,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2424</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2424</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2424</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2424</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2424</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2871,22 +1316,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2423</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2423</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2423</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2423</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2423</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2902,22 +1331,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2422</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2422</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2422</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2422</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2422</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2929,22 +1342,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2421</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2421</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2421</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2421</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2421</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -2960,22 +1357,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2408</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2408</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2408</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2408</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2408</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -2987,22 +1368,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2407</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2407</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2407</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2407</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2407</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -3018,22 +1383,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2406</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2406</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2406</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2406</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2406</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -3045,22 +1394,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2405</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2405</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2405</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2405</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2405</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -3076,22 +1409,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2404</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2404</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2404</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2404</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2404</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -3103,22 +1420,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Gemeinde 2403</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2403</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2403</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2403</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Gemeinde 2403</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -3134,22 +1435,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2402</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2402</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2402</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2402</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2402</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -3163,22 +1448,6 @@
                 <Language>de</Language>
                 <Text>Gemeinde 2401</Text>
               </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Gemeinde 2401</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Gemeinde 2401</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Gemeinde 2401</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
-                <Text>Gemeinde 2401</Text>
-              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Name>
@@ -3190,22 +1459,6 @@
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Amt für Raumplanung</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Amt für Raumplanung</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>Amt für Raumplanung</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Amt für Raumplanung</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>en</Language>
                 <Text>Amt für Raumplanung</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>

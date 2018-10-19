@@ -1,0 +1,28 @@
+allprojects{
+    buildscript {
+        repositories {
+            mavenLocal()      
+            maven {
+                url "http://jars.interlis.ch"
+            }
+            maven {
+                url "http://download.osgeo.org/webdav/geotools/"
+            }
+            mavenCentral()
+            jcenter()
+        }
+    }
+    ext {
+        dbUriEdit = "jdbc:postgresql://192.168.50.8:5432/edit"
+        dbUserEdit = "ddluser"
+        dbPwdEdit = "ddluser"
+
+        dbSchemaOerebAuszugAnnex = "agi_oereb_azg_ann"
+        dbSchemaOerebNutzungsplanungZustaendigeStelle = "arp_npl_oereb_zustaendige_stelle"
+
+        iliModelTransferstruktur = 'OeREBKRMtrsfr_V1_1'
+        iliModelAuszugAnnex = 'SO_AGI_OEREB_Auszug_Annex_20181015'
+    }
+}
+
+

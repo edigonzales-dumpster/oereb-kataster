@@ -1,5 +1,0 @@
-rootProject.name = 'oerebk'
-include 'initdb'
-include 'dataimport'
-include 'nplso2trsfr'
-include 'nplso-responsible-office'

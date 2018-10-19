@@ -1,0 +1,179 @@
+import ch.so.agi.gretl.tasks.*
+import ch.so.agi.gretl.api.TransferSet
+import java.nio.file.Paths
+
+def GROUP = "Initialisierung Datenbanken"
+
+task createSchemaOereb(type: Ili2pgImportSchema) {
+    description = "Erstellt das OEREB-Produktions-Datenbankschema (Transferstruktur)."
+    group = GROUP
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelTransferstruktur
+    dbschema = dbSchemaOereb
+    nameByTopic = true
+    createFk = false
+    createFkIdx = true
+    createUnique = false
+    createNumChecks = false
+    createEnumTabs = true
+    createBasketCol = true
+    createDatasetCol = true
+    sqlEnableNull = true // temporär? Oder notwendig zum Austauschen der gesetzlichen Grundlagen? Wahrscheinlich ist der ganze Topf schnell von 0 auf 100% hergestellt.
+    strokeArcs = true
+    defaultSrsCode = 2056
+    disableValidation = true
+}
+
+task importFederalCodesets(type: Ili2pgImport) {
+    description = "Importiert OeREBKRM_V1_1_Codelisten_20170101.xml."
+    group = GROUP
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelBasis
+    dbschema = dbSchemaOereb
+    dataFile = "../../../data/ch.admin/OeREBKRM_V1_1_Codelisten_20170101.xml"
+    dataset = "ch.admin.code_sets"
+    disableValidation = true
+}
+
+task importFederalLegalBasis(type: Ili2pgImport) {
+    description = "Importiert OeREBKRM_V1_1_Gesetze_20180501.xml."
+    group = GROUP
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelVorschriften
+    dbschema = dbSchemaOereb
+    dataFile = "../../../data/ch.admin/OeREBKRM_V1_1_Gesetze_20180501.xml"
+    dataset = "ch.admin.legal_basis"
+    disableValidation = true
+}
+
+task importCantonalLegalBasisToOereb(type: Ili2pgImport) {
+    description = "Importiert ch.so.sk.gesetze.oereb.xml."
+    group = GROUP
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelVorschriften
+    dbschema = dbSchemaOereb
+    dataFile = "../../../data/ch.so.sk/ch.so.sk.gesetze.oereb.xml"
+    dataset = "ch.so.sk.legal_basis"
+    disableValidation = true
+}
+
+task createSchemaOerebAuszugAnnex(type: Ili2pgImportSchema) {
+    description = "Erstellt das OEREB-Auszugs-Annex-Schema mit Zusatzinformationen für XML-Auszug."
+    group = GROUP
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelAuszugAnnex
+    modeldir = "../../models/;http://models.geo.admin.ch" // TODO: temporär
+    dbschema = dbSchemaOerebAuszugAnnex
+    nameByTopic = true
+    createFk = false
+    createFkIdx = true
+    createUnique = false
+    createNumChecks = false
+    sqlEnableNull = false
+    createEnumTabs = true
+    createBasketCol = false
+    createDatasetCol = false
+    smart2Inheritance = true
+    strokeArcs = true
+    defaultSrsCode = 2056
+    disableValidation = true
+}
+
+task createSchemaOerebNutzungsplanung(type: Ili2pgImportSchema) {
+    description = "Erstellt für die Nutzungsplanung ein OEREB-Datenbankschema (Transferstruktur). Wird für das Staging verwendet."
+    group = GROUP
+    database = [dbUriEdit, dbUserEdit, dbPwdEdit]
+    models = iliModelTransferstruktur
+    dbschema = dbSchemaOerebNutzungsplanung
+    nameByTopic = true
+    createFk = false
+    createFkIdx = true
+    createUnique = false
+    createNumChecks = false
+    createEnumTabs = true
+    createBasketCol = true
+    createDatasetCol = true
+    strokeArcs = true
+    sqlEnableNull = true
+    defaultSrsCode = 2056
+    disableValidation = true
+}
+
+task importFederalLegalBasisToOerebNutzungsplanung(type: Ili2pgImport) {
+    description = "Importiert OeREBKRM_V1_1_Gesetze_20180501.xml."
+    group = GROUP
+    database = [dbUriEdit, dbUserEdit, dbPwdEdit]
+    models = iliModelVorschriften
+    dbschema = dbSchemaOerebNutzungsplanung
+    dataFile = "../../../data/ch.admin/OeREBKRM_V1_1_Gesetze_20180501.xml"
+    dataset = "ch.admin.legal_basis"
+    disableValidation = true
+}
+
+task importCantonalLegalBasisToOerebNutzungsplanung(type: Ili2pgImport) {
+    description = "Importiert ch.so.sk.gesetze.oereb.xml."
+    group = GROUP
+    database = [dbUriEdit, dbUserEdit, dbPwdEdit]
+    models = iliModelVorschriften
+    dbschema = dbSchemaOerebNutzungsplanung
+    dataFile = "../../../data/ch.so.sk/ch.so.sk.gesetze.oereb.xml"
+    dataset = "ch.so.sk.legal_basis"
+    disableValidation = true
+}
+
+task importResponsibleOfficesToOerebNutzungsplanung(type: Ili2pgImport) {
+    description = "Importiert ch.so.arp.npl.zustaendigestelle.xtf."
+    group = GROUP
+    database = [dbUriEdit, dbUserEdit, dbPwdEdit]
+    models = iliModelTransferstruktur
+    dbschema = dbSchemaOerebNutzungsplanung
+    dataFile = "../../../data/ch.so.arp/ch.so.arp.npl.zustaendigestelle.xtf"
+    dataset = "ch.so.arp.nutzungsplanung" // Gleiches Dataset wie anschliessend die Daten des Datenumbaues, da Ämterinformationen Bestandteil des Transfers sein sollen.
+    disableValidation = true
+}
+
+// Quick 'n' dirty Views für WMS-Layer
+task createOerebNutzungsplanungViews(type: SqlExecutor) {
+    description = "Erzeugt Views für WMS-Layer in Nutzungsplanungs-Staging-Schema ($dbSchemaOerebNutzungsplanung). Ist so nur zum Testen des Proof of Concepts."
+    group = GROUP
+    database = [dbUriEdit, dbUserEdit, dbPwdEdit] // Eventuell direkt auf OEREB-DB.
+    sqlFiles = ["arp_npl_oereb_views.sql"]
+}
+
+task createSchemaNutzungsplanung(type: Ili2pgImportSchema) {
+    description = "Erstellt das Nutzungsplanungs-Datenbankschema (Kantonsmodell)."
+    group = GROUP
+    database = [dbUriEdit, dbUserEdit, dbPwdEdit]
+    models = iliModelNutzungsplanung
+    dbschema = dbSchemaNutzungsplanung
+    nameByTopic = true
+    createFk = false
+    createFkIdx = true
+    createUnique = false
+    createNumChecks = false
+    createEnumTabs = true
+    createBasketCol = true
+    createDatasetCol = true
+    strokeArcs = true
+    defaultSrsCode = 2056
+    disableValidation = true
+}
+
+task createSchemaAmtlicheVermessung(type: Ili2pgImportSchema) {
+    description = "Erstellt das Datenbankschema für die amtliche Vermessung (Bundesmodell)."
+    group = GROUP
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelAmtlicheVermessung
+    dbschema = dbSchemaAmtlicheVermessung
+    nameByTopic = true
+    createFk = false
+    createFkIdx = true
+    createUnique = false
+    createNumChecks = false
+    createEnumTabs = true
+    createBasketCol = true
+    createDatasetCol = true
+    strokeArcs = true
+    defaultSrsCode = 2056
+    disableValidation = true
+}

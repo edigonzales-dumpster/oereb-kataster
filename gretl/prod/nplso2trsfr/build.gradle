@@ -1,0 +1,45 @@
+import ch.so.agi.gretl.tasks.*
+import ch.so.agi.gretl.api.TransferSet
+import java.nio.file.Paths
+
+// Export-Verzeichnis
+def pathToTempFolder = System.getProperty("java.io.tmpdir")
+def pathToExportFolder = Paths.get(pathToTempFolder, 'export_data')
+
+def GROUP = "Datenumbau NPLSO -> Transferstruktur (Staging)"
+
+task deleteStaging(type: SqlExecutor) {
+    description = "Löscht die Daten aus dem Staging-Schema ($dbSchemaOerebNutzungsplanung)."
+    group = GROUP
+    database = [dbUriEdit, dbUserEdit, dbPwdEdit]
+    sqlFiles = ["delete_oereb_npl_staging.sql"]
+}
+
+// Hinweise auf die gesetzlichen Grundlagen muss in einem 
+// nachgelagerten Schritt passieren und kann nicht direkt
+// in der langen CTE erfolgen. Updates von CTE direkt
+// gehen nicht, sondern nur auf bereits vorhandene Daten
+// in Tabellen.
+// Ebenfalls in einer nachgelagerter Query werden die
+// zustaendigen Stellen nachgeführt.
+task insertStaging(type: SqlExecutor) {
+    description = "Baut die Daten aus dem kantonalen Modell in das Rahmenmodell um und speichert sie im Staging-Schema ($dbSchemaOerebNutzungsplanung)."
+    group = GROUP
+    database = [dbUriEdit, dbUserEdit, dbPwdEdit]
+    sqlFiles = ["insert_oereb_npl_staging.sql", "insert_oereb_npl_staging_legal_basis.sql", "update_oereb_npl_staging_responsible_office.sql", "update_oereb_npl_staging_fix_empty_responsible_office_errors.sql"]
+}
+
+task exportLandUsePlansToXtf(type: Ili2pgExport) {
+    description = "Export die Nutzungsplanungsdaten in das OEREB-Rahmenmodell (Transferstruktur) aus dem Staging-Schema ($dbSchemaOerebNutzungsplanung)."
+    group = GROUP
+    database = [dbUriEdit, dbUserEdit, dbPwdEdit]
+    models = iliModelTransferstruktur
+    dbschema = dbSchemaOerebNutzungsplanung
+    dataset = "ch.so.arp.nutzungsplanung"
+    dataFile = file(Paths.get(pathToExportFolder.toString(), xtfOerebLandUsePlanFileName))
+    disableValidation = true
+
+    doLast {
+        println "File exported to: " + pathToExportFolder
+    }
+}
