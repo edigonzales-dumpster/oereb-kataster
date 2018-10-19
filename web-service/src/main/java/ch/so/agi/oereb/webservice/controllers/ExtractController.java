@@ -67,8 +67,9 @@ public class ExtractController {
         isReduced = true;
     }
     
+    
+    
     GetExtractByIdResponseType getExtractByIdResponseType = getExtractByIdResponseTypeService.getExtractById(egrid, isReduced, withGeometry, withImages);
-   
     return ResponseEntity.ok(getExtractByIdResponseType);
 }
 
