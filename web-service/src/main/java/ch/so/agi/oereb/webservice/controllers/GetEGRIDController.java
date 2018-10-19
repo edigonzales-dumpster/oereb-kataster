@@ -41,8 +41,8 @@ public class GetEGRIDController {
             log.warn("No egrid found at: " + xy);
             return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
         }
-        return ResponseEntity.ok(getEGRIDResponseType);
         
+        return ResponseEntity.ok(getEGRIDResponseType);
     }
 
     // For both coordinate request methods (XY, GNSS), 
