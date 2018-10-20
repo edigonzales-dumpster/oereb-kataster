@@ -1,5 +1,12 @@
 # oereb-kataster
 
+Proof-of-Concept:
+- Systemarchitektur im Allgemeinen
+- Datenumbauten
+- Werkzeuge (ili2pg etc.)
+- Cookie-Cutter-Web-Service (XML-Auszug)
+- Iconizer
+
 ## Datenbank und WMS-Server
 ```
 vagrant up
@@ -9,7 +16,7 @@ Enthält PostgresSQL/PostGIS und QGIS 2.18, QGIS Server und GeoServer.
 ## OEREB-(Daten-)Infrastruktur
 ### Datenbank initialisieren
 ```
-gradle createSchemaOereb importFederalCodesets importFederalLegalBasis createSchemaOerebAuszugAnnex createSchemaOerebNutzungsplanung importFederalLegalBasisToOerebNutzungsplanung importCantonalLegalBasisToOerebNutzungsplanung importResponsibleOfficesToOerebNutzungsplanung createOerebNutzungsplanungViews createSchemaNutzungsplanung createSchemaAmtlicheVermessung
+gradle createSchemaOereb importFederalCodesets importFederalLegalBasis importCantonalLegalBasisToOereb createSchemaOerebAuszugAnnex createSchemaOerebNutzungsplanung importFederalLegalBasisToOerebNutzungsplanung importCantonalLegalBasisToOerebNutzungsplanung importResponsibleOfficesToOerebNutzungsplanung createOerebNutzungsplanungViews createSchemaNutzungsplanung createSchemaAmtlicheVermessung
 ```
 Erstellt vier Schemas in zwei Datenbanken (`oereb`=OEREB-Datenbank und `edit`=GDI-Erfassungsdatenbank):
 
@@ -30,20 +37,23 @@ Importiert:
 
 ### Umbau Nutzungsplanung kantonales Modell -> Transferstruktur
 ```
-gradle deleteStaging insertStaging
+gradle deleteStaging insertStaging updateLegendEntrySymbols
 ```
 Löscht zuerst die Daten aus dem Staging-Schema und führt anschliessend den Datenumbau aus. Die gesetzlichen Grundlagen wurden in einem anderen Basket/Dataset importiert und werden nicht gelöscht. Es ist nicht nur eine lange CTE, sondern es sind noch nachgelagerte Queries nötig (gesetzliche Grundlagen und zuständige Stellen). Diese Queries (UPDATES) können nicht in der CTE ausgeführt werden, da zu diesem Zeitpunkt die Daten noch nicht geschrieben sind und in eine CTE selber nicht geupdatet werden kann (nur die persistierte Tabelle).
 
-```
-groovy iconizer.groovy
-```
-Erzeugt vom WMS die einzelnen Ikönchen und speichert diese in der passenden Legende (**TODO:** GRETL-Task und generischer im allgemeinen). Momentan werden nur die Legendeneinträge der Grundnutzung bearbeitet. Absolut *alpha*!
+Mit dem `updateLegendEntrySymbols` werden die Symbole für den Auszug erstelle. Nur für Grundnutzung und sehr PRE-ALPHA (**TODO:** GRETL-Task und generischer im allgemeinen).
 
 ```
 gradle exportLandUsePlansToXtf
 xmllint --format ch.so.arp.nutzungsplanung.oereb.xtf -o ch.so.arp.nutzungsplanung.oereb.xtf
 ```
 Exportiert die Nutzungsplanungsdaten in die Transferstruktur (nur Nutzungsplanungs-Dataset, dh. ohne die (externen) gesetzlichen Grundlagen).
+
+```
+gradle replaceOerebNutzungsplanung 
+```
+Importiert die so eben exportierten Nutzungsplanungs-OEREB in die OEREB-Katasterdatenbank.
+
 
 ### Verschiedene OEREB-Daten einmalig herstellen 
 Um gewisse Daten einmalig herzustellen oder testweise, sind verschieden GRETL-Tasks entstanden. Teilweise mit Dummydaten. Die Nachführung dieser Daten werden dann in QGIS o.ä. gemacht. 
@@ -56,8 +66,9 @@ Diese Tasks sind zwecks besserer Übersicht getrennt von den anderen Tasks.
 
 ```
 http://localhost:8888/oereb/getegrid/xml/?XY=2598098,1225627
-http://localhost:8888/oereb/extract/reduced/xml/geometry/CH870672603279
+http://localhost:8888/oereb/extract/reduced/xml/geometry/CH870672603279 (Flughafen Grenchen)
 http://localhost:8888/oereb/extract/reduced/xml/CH870672603279
+http://localhost:8888/oereb/extract/reduced/xml/geometry/CH933273065885 (nur Nutzungsplanung)
 ```
 
 ### Jaxb

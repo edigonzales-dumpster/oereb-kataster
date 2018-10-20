@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ch.so.agi.oereb.webservice.models.Egrid;
 
+@Deprecated
 @Transactional
 @Repository
 public class EgridDAOImpl implements EgridDAO {
@@ -35,7 +36,11 @@ public class EgridDAOImpl implements EgridDAO {
                 "  CASE\n" + 
                 "    WHEN g.art = 'Liegenschaft' THEN 'RealEstate' \n" + 
                 "    ELSE 'Distinct_and_permanent_rights.BuildingRight'\n" + 
-                "  END AS realestatetype\n" + 
+                "  END AS realestatetype,\n" + 
+                "  ST_AsBinary(parcels.geometrie) AS geomwkb,\n" + 
+                "  ST_AsText(parcels.geometrie) AS geomwkt,\n" + 
+                "  gemeinde.aname AS municipality,\n" + 
+                "  gemeinde.bfsnr AS municipalitycode\n" + 
                 "FROM \n" + 
                 "  ( \n" + 
                 "    SELECT t_id,  \n" + 
@@ -52,8 +57,12 @@ public class EgridDAOImpl implements EgridDAO {
                 "  ) AS parcels \n" + 
                 "  LEFT JOIN agi_avdpool.liegenschaften_grundstueck AS g \n" + 
                 "  ON g.t_id = parcels.grundstueck_fk \n" + 
+                "  LEFT JOIN agi_avdpool.gemeindegrenzen_gemeindegrenze AS gemeindegrenze\n" + 
+                "  ON ST_Intersects(parcels.geometrie, gemeindegrenze.geometrie)\n" + 
+                "  LEFT JOIN agi_avdpool.gemeindegrenzen_gemeinde AS gemeinde \n" + 
+                "  ON gemeindegrenze.gemeindegrenze_von = gemeinde.t_id\n" + 
                 "WHERE \n" + 
-                "  ST_Intersects(ST_SetSRID(ST_MakePoint(?, ?),2056), geometrie) \n" + 
+                "  ST_Intersects(ST_SetSRID(ST_MakePoint(?, ?),2056), parcels.geometrie) \n" + 
                 "";
                 
         RowMapper<Egrid> rowMapper = new BeanPropertyRowMapper<Egrid>(Egrid.class);
