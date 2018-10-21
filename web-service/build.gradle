@@ -57,3 +57,7 @@ sourceSets {
         runtimeClasspath += generated.output
     }
 }
+
+bootRun {
+    classpath = sourceSets.main.runtimeClasspath + sourceSets.generated.output
+}
