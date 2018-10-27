@@ -26,6 +26,7 @@ allprojects {
         dbSchemaOerebNutzungsplanung = "arp_npl_oereb"
         dbSchemaNutzungsplanung = "arp_npl"
         dbSchemaAmtlicheVermessung = "agi_avdpool"
+        dbSchemaPLZOrtschaft = "agi_plzortschaft"
 
         iliModelBasis = 'OeREBKRM_V1_1'
         iliModelVorschriften = 'OeREBKRMvs_V1_1'
@@ -33,6 +34,7 @@ allprojects {
         iliModelAuszugAnnex = 'SO_AGI_OEREB_Auszug_Annex_20181015'
         iliModelNutzungsplanung = 'SO_Nutzungsplanung_20171118'
         iliModelAmtlicheVermessung = 'DM01AVCH24LV95D'
+        iliModelPLZOrtschaft = 'PLZOCH1LV95D'
 
         xtfOerebLandUsePlanFileName = "ch.so.arp.nutzungsplanung.oereb.xtf"
     }

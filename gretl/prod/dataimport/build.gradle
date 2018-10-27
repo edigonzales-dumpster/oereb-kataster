@@ -27,6 +27,10 @@ def cantonalLandUsePlansBaseUrl = "https://s3.eu-central-1.amazonaws.com/ch.so.a
 def cadastralSurveyingDataSets = [2457,2498,2502,2546,2580,2601,2614]
 def cadastralSurveyingBaseUrl = "http://geoweb.so.ch/av_datenabgabe/av_daten/itf_ch/"
 
+// PLZ/Ortschaft
+def postalCodesBaseUrl = "http://data.geo.admin.ch/ch.swisstopo-vd.ortschaftenverzeichnis_plz/"
+def postalCodesDataSet = "PLZO_INTERLIS_LV95"
+
 def GROUP = "Datenimport"
 
 // Herunterladen der Bundes-OEREB-Datensätze
@@ -288,7 +292,7 @@ task importOerebAuszugAnnex(type: Ili2pgImport) {
     disableValidation = true
 }
 
-// Importieren der Nutzungsplanungsdaten
+// Importieren der Nutzungsplanungsdaten in die OEREB-Datenbank
 task replaceOerebNutzungsplanung(type: Ili2pgReplace) {
     description = "Importiert die Nutzungsplanungsdaten in der Transferstruktur in die OEREB-Datenbank."
     group = GROUP
@@ -299,3 +303,40 @@ task replaceOerebNutzungsplanung(type: Ili2pgReplace) {
     dataFile = file(Paths.get(pathToExportFolder.toString(), xtfOerebLandUsePlanFileName))
     disableValidation = true
 }
+
+// Herunterladen der PLZ/Ortschaft
+task downloadPostalCodesData(type: Download) {
+    description = "Importiert die PLZ/Ortschaften in die OEREB-Datenbank."
+    group = GROUP
+    src postalCodesBaseUrl + postalCodesDataSet + ".zip"
+    dest pathToTempFolder
+    overwrite true
+
+    doLast {
+        println "File downloaded to: " + pathToTempFolder
+    }        
+}
+
+// Unzippen der PLZ/Ortschaft
+task unzipPostalCodesData(type: Copy, dependsOn: downloadPostalCodesData) {
+    group = GROUP
+    from zipTree(Paths.get(pathToTempFolder, postalCodesDataSet + ".zip"))
+    into file(pathToUnzipFolder)
+    include "**/*.itf"
+
+    doLast {
+        println "File unzipped to directory: " + pathToUnzipFolder
+    }        
+}
+
+// Importieren der PLZ/Ortschaft
+task importPostalCodesData(type: Ili2pgImport, dependsOn: unzipPostalCodesData) {
+    description = "Importiert die PLZ/Ortschaften in die OEREB-Datenbank."
+    group = GROUP
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelPLZOrtschaft
+    dbschema = dbSchemaPLZOrtschaft
+    dataFile = file(Paths.get(pathToUnzipFolder.toString(), postalCodesDataSet, "PLZO_ITF_LV95.itf"))
+    disableValidation = true
+}
+

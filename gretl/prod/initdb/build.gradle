@@ -13,6 +13,7 @@ task createSchemaOereb(type: Ili2pgImportSchema) {
     nameByTopic = true
     createFk = false
     createFkIdx = true
+    createGeomIdx = true
     createUnique = false
     createNumChecks = false
     createEnumTabs = true
@@ -67,6 +68,7 @@ task createSchemaOerebAuszugAnnex(type: Ili2pgImportSchema) {
     nameByTopic = true
     createFk = false
     createFkIdx = true
+    createGeomIdx = true
     createUnique = false
     createNumChecks = false
     sqlEnableNull = false
@@ -88,6 +90,7 @@ task createSchemaOerebNutzungsplanung(type: Ili2pgImportSchema) {
     nameByTopic = true
     createFk = false
     createFkIdx = true
+    createGeomIdx = true
     createUnique = false
     createNumChecks = false
     createEnumTabs = true
@@ -149,6 +152,7 @@ task createSchemaNutzungsplanung(type: Ili2pgImportSchema) {
     nameByTopic = true
     createFk = false
     createFkIdx = true
+    createGeomIdx = true
     createUnique = false
     createNumChecks = false
     createEnumTabs = true
@@ -168,11 +172,32 @@ task createSchemaAmtlicheVermessung(type: Ili2pgImportSchema) {
     nameByTopic = true
     createFk = false
     createFkIdx = true
+    createGeomIdx = true
     createUnique = false
     createNumChecks = false
     createEnumTabs = true
     createBasketCol = true
     createDatasetCol = true
+    strokeArcs = true
+    defaultSrsCode = 2056
+    disableValidation = true
+}
+
+task createSchemaPLZOrtschaft(type: Ili2pgImportSchema) {
+    description = "Erstellt das Datenbankschema für PLZ/Ortschaft."
+    group = GROUP
+    database = [dbUriOereb, dbUserOereb, dbPwdOereb]
+    models = iliModelPLZOrtschaft
+    dbschema = dbSchemaPLZOrtschaft
+    nameByTopic = true
+    createFk = false
+    createFkIdx = true
+    createGeomIdx = true
+    createUnique = false
+    createNumChecks = false
+    createEnumTabs = true
+    createBasketCol = false
+    createDatasetCol = false
     strokeArcs = true
     defaultSrsCode = 2056
     disableValidation = true
