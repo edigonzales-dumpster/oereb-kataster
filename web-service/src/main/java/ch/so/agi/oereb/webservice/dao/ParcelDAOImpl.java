@@ -68,7 +68,6 @@ public class ParcelDAOImpl implements ParcelDAO {
         return parcelList;
     }
     
-
     @Override
     public List<Parcel> getParcelByGNSS(double latitude, double longitude) {
         String sql = "SELECT parcels.t_id, \n" + 
@@ -215,7 +214,6 @@ public class ParcelDAOImpl implements ParcelDAO {
         List<Parcel> parcelList = jdbcTemplate.query(sql, rowMapper, postalcode, localisation, housingNumber);
         return parcelList;
     }
-
 
     @Override
     public List<Parcel> getParcelByPostalcodeAndLocalisation(int postalcode, String localisation) {

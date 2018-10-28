@@ -59,25 +59,27 @@ VERSION "2018-10-15"  =
     /** Liste mit den Themen und ihren englischen Übersetzungen und ob zum Thema überhaupt Daten vorhanden sind.
      */
     CLASS KatasterThema =
-      Thema : MANDATORY OeREBKRM_V1_1.Thema;
-      /** Englische Übersetzung des Themas.
+      /** Thema gemäss Enumeration aus Transferstruktur.
        */
-      Thema_en : MANDATORY TEXT;
-      /** Sind Daten zu diesem Thema vorhanden?
+      Thema : MANDATORY OeREBKRM_V1_1.Thema;
+      /** Englische Übersetzung des Themas als Code (gemäss DATA-Extract).
+       */
+      Code : MANDATORY TEXT;
+      /** Sind Daten zu diesem Thema vorhanden? (=ThemeWithoutData)
        */
       Daten_vorhanden : MANDATORY BOOLEAN;
-      /** Name für Auszug
+      /** Übersetzter Name des Themas.
        */
-      Displayname : TEXT;
+      Name : MANDATORY LocalisationCH_V1.MultilingualText;
     END KatasterThema;
 
     /** Subthema (z.B. Grundnutzung)
      */
     CLASS Subthema =
-      Name : MANDATORY TEXT*60;
-      /** Name für XML-Auszug
+      /** Übersetzter Name des Subthemas.
        */
-      Displayname : TEXT;
+      Name : MANDATORY TEXT;
+      Code : MANDATORY TEXT;
     END Subthema;
 
     /** Zusätzliche Informationen zu einer Gemeinde, insbesondere Gemeindelogo und Anschrift.

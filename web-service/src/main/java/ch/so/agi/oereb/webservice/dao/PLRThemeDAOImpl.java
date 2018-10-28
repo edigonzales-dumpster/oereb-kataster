@@ -57,8 +57,8 @@ public class PLRThemeDAOImpl implements PLRThemeDAO {
                 "    ELSE TRUE\n" + 
                 "  END AS concerned,\n" + 
                 "  thema.ilicode,\n" + 
-                "  katasterthema.thema_en AS code,\n" + 
-                "  katasterthema.displayname AS \"text\",\n" + 
+                "  katasterthema.code AS code,\n" + 
+                "  katasterthema.aname_de AS \"text\",\n" + 
                 "  katasterthema.daten_vorhanden AS hasdata\n" + 
                 "FROM\n" + 
                 "  agi_oereb.thema AS thema \n" + 

@@ -41,8 +41,8 @@ task exportDataOerebAuszugAnnex(type: Ili2pgExport) {
     description = "Export die Auszug-Annex-Daten."
     group = GROUP
     database = [dbUriEdit, dbUserEdit, dbPwdEdit]
-    models = iliModelAuszugAnnex
-    modeldir = "../models/;http://models.geo.admin.ch" // TODO: temporär
+    models = iliModelAuszugAnnex    
+    modeldir = "../../models/;http://models.geo.admin.ch" // TODO: temporär
     dbschema = dbSchemaOerebAuszugAnnex
     dataFile = file("ch.so.agi.oereb.auszug.annex.xtf")
     disableValidation = true

@@ -132,8 +132,8 @@ DELETE FROM agi_oereb_azg_ann.katasterauszgnnex_katasterthema;
 
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -145,8 +145,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -158,8 +158,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -171,8 +171,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -184,8 +184,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -197,8 +197,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -210,8 +210,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -223,8 +223,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -236,8 +236,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -249,8 +249,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -262,8 +262,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -275,8 +275,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -288,8 +288,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -301,8 +301,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -314,8 +314,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -327,8 +327,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -340,8 +340,8 @@ VALUES (
 ;
 INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_katasterthema (
   thema,
-  displayname,
-  thema_en,
+  aname_de,
+  code,
   daten_vorhanden
 )
 VALUES (
@@ -362,8 +362,8 @@ WITH nutzungsplanungs_thema AS (
 ,
 subthema_grundnutzung AS (
   INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_subthema (
+    code,
     aname,
-    displayname,
     r_katasterthema
   )
   SELECT
@@ -377,8 +377,8 @@ subthema_grundnutzung AS (
 ,
 subthema_ueberlagernd_flaeche AS (
   INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_subthema (
+    code,
     aname,
-    displayname,
     r_katasterthema
   )
   SELECT
@@ -392,8 +392,8 @@ subthema_ueberlagernd_flaeche AS (
 ,
 subthema_ueberlagernd_linie AS (
   INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_subthema (
+    code,
     aname,
-    displayname,
     r_katasterthema
   )
   SELECT
@@ -407,8 +407,8 @@ subthema_ueberlagernd_linie AS (
 ,
 subthema_ueberlagernd_punkt AS (
   INSERT INTO agi_oereb_azg_ann.katasterauszgnnex_subthema (
+    code,
     aname,
-    displayname,
     r_katasterthema
   )
   SELECT

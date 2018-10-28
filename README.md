@@ -75,6 +75,9 @@ http://localhost:8888/oereb/getegrid/xml/2540/Flughafenstrasse
 http://localhost:8888/oereb/extract/reduced/xml/geometry/CH870672603279 (Flughafen Grenchen)
 http://localhost:8888/oereb/extract/reduced/xml/CH870672603279
 http://localhost:8888/oereb/extract/reduced/xml/geometry/CH933273065885 (nur Nutzungsplanung)
+
+https://gca-app.geocentrale.com/oereb/extract/reduced/pdf/CH533477053857
+https://gca-app.geocentrale.com/oereb/extract/reduced/xml/CH533477053857
 ```
 
 ### Jaxb
