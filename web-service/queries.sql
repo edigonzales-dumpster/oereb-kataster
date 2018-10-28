@@ -27,7 +27,7 @@ FROM
   LEFT JOIN agi_avdpool.liegenschaften_grundstueck AS g 
   ON g.t_id = parcels.grundstueck_fk 
 WHERE 
-  ST_Intersects(ST_SetSRID(ST_MakePoint(2598098, 1225627),2056), geometrie) 
+  ST_Intersects(ST_SetSRID(ST_MakePoint(2598098, 1225627),2056), parcels.geometrie) 
 ;
 
 SELECT parcels.t_id, 

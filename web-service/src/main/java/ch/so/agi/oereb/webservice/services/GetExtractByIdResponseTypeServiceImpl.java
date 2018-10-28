@@ -45,15 +45,13 @@ public class GetExtractByIdResponseTypeServiceImpl implements GetExtractByIdResp
         ch.admin.geo.schemas.v_d.oereb._1_0.extractdata.ObjectFactory objectFactoryExtractData =
                 new ch.admin.geo.schemas.v_d.oereb._1_0.extractdata.ObjectFactory();
 
+        // This is the root element of the XML extract.
         GetExtractByIdResponseType extractByIdResponseType = objectFactoryExtract.createGetExtractByIdResponseType();
 
         Extract extract = objectFactoryExtractData.createExtract();
         
         // General information, e.g. egrid, municipality, geometry etc.
         Parcel parcel = parcelDAO.getParcelByEgrid(egrid);
-        log.debug(parcel.getMunicipality());
-        log.debug(parcel.getGeomWkt());
-        log.debug(parcel.getGeomWkb().toString());
         
         // Creation date
         GregorianCalendar cal = new GregorianCalendar();

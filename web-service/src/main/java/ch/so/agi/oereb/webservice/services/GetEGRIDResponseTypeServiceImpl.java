@@ -10,9 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ch.so.agi.oereb.webservice.dao.EgridDAOImpl;
 import ch.so.agi.oereb.webservice.dao.ParcelDAOImpl;
-import ch.so.agi.oereb.webservice.models.Egrid;
 import ch.so.agi.oereb.webservice.models.Parcel;
 import ch.admin.geo.schemas.v_d.oereb._1_0.extract.GetEGRIDResponseType;
 import ch.admin.geo.schemas.v_d.oereb._1_0.extract.ObjectFactory;
@@ -30,6 +28,30 @@ public class GetEGRIDResponseTypeServiceImpl implements GetEGRIDResponseTypeServ
         return createGetEGRIDResponseType(parcelList);
     }
     
+    @Override
+    public GetEGRIDResponseType getGetEGRIDResponseTypeByGNSS(double latitude, double longitude) {
+        List<Parcel> parcelList = parcelDAO.getParcelByGNSS(latitude, longitude);
+        return createGetEGRIDResponseType(parcelList);
+    }
+
+    @Override
+    public GetEGRIDResponseType getGetEGRIDResponseTypeByNumberAndIdentDN(String number, String identdn) {
+        List<Parcel> parcelList = parcelDAO.getParcelByNumberAndIdentDN(number, identdn);
+        return createGetEGRIDResponseType(parcelList);
+    }
+
+    @Override
+    public GetEGRIDResponseType getGetEGRIDResponseTypeByPostalcodeAndLocalisationAndNumber(String postalcode,
+            String localisation, String number) {
+        List<Parcel> parcelList;
+        if (number == null) {
+            parcelList = parcelDAO.getParcelByPostalcodeAndLocalisation(Integer.valueOf(postalcode), localisation);
+        } else {
+            parcelList = parcelDAO.getParcelByPostalcodeAndLocalisationAndHousingNumber(Integer.valueOf(postalcode), localisation, number);
+        }
+        return createGetEGRIDResponseType(parcelList);
+    }
+
     private GetEGRIDResponseType createGetEGRIDResponseType(List<Parcel> parcelList) {
         ObjectFactory objectFactory = new ObjectFactory();
         GetEGRIDResponseType getEGRIDResponseType = objectFactory.createGetEGRIDResponseType();

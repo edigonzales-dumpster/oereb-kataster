@@ -44,7 +44,76 @@ public class GetEGRIDController {
         
         return ResponseEntity.ok(getEGRIDResponseType);
     }
+    
+    @RequestMapping(value="/getegrid/{format:xml}/", method=RequestMethod.GET,
+            produces={MediaType.APPLICATION_XML_VALUE},
+            params={"GNSS"})
+    public ResponseEntity<?> getEgridByGNSS (
+            @PathVariable("format") String format,
+            @RequestParam(value = "GNSS") String gnss) {
+                
+        double[] coords = validateCoordinateRequestParam(gnss);
+        GetEGRIDResponseType getEGRIDResponseType = getEGRIDResponseTypeService.getGetEGRIDResponseTypeByGNSS(coords[0], coords[1]);
+        
+        if (getEGRIDResponseType.getEgridAndNumberAndIdentDN().size() == 0) {
+            log.warn("No egrid found at: " + gnss);
+            return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        }
+        
+        return ResponseEntity.ok(getEGRIDResponseType);
+    }    
+    
+    @RequestMapping(value="/getegrid/{format:xml}/{identdn:.{12,12}}/{number}", method=RequestMethod.GET,
+            produces={MediaType.APPLICATION_XML_VALUE})
+    public ResponseEntity<?> getEgridByNumberAndIdentDN (
+            @PathVariable("format") String format,
+            @PathVariable("identdn") String identdn,
+            @PathVariable("number") String number) {
+                
+        GetEGRIDResponseType getEGRIDResponseType = getEGRIDResponseTypeService.getGetEGRIDResponseTypeByNumberAndIdentDN(number, identdn);
+        
+        if (getEGRIDResponseType.getEgridAndNumberAndIdentDN().size() == 0) {
+            log.warn("No egrid found at: " + identdn + " / " + number);
+            return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        }
+        
+        return ResponseEntity.ok(getEGRIDResponseType);
+    } 
 
+    @RequestMapping(value="/getegrid/{format:xml}/{postalcode:[0-9]{4,4}}/{localisation}/{number}", method=RequestMethod.GET,
+            produces={MediaType.APPLICATION_XML_VALUE})
+    public ResponseEntity<?> getEgridByPostalcodeAndLocalisationAndNumber (
+        @PathVariable("postalcode") String postalcode,
+        @PathVariable("localisation") String localisation,
+        @PathVariable("number") String number) {
+        
+        GetEGRIDResponseType getEGRIDResponseType = getEGRIDResponseTypeService.getGetEGRIDResponseTypeByPostalcodeAndLocalisationAndNumber(postalcode, localisation, number);
+    
+        if (getEGRIDResponseType.getEgridAndNumberAndIdentDN().size() == 0) {
+            log.warn("No egrid found at: " + postalcode + " / " + localisation + " / " + number);
+            return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        }
+    
+        return ResponseEntity.ok(getEGRIDResponseType);
+    }
+
+    @RequestMapping(value="/getegrid/{format:xml}/{postalcode:[0-9]{4,4}}/{localisation}", method=RequestMethod.GET,
+            produces={MediaType.APPLICATION_XML_VALUE})
+    public ResponseEntity<?> getEgridByPostalcodeAndLocalisation (
+        @PathVariable("postalcode") String postalcode,
+        @PathVariable("localisation") String localisation) {
+        
+        GetEGRIDResponseType getEGRIDResponseType = getEGRIDResponseTypeService.getGetEGRIDResponseTypeByPostalcodeAndLocalisationAndNumber(postalcode, localisation, null);
+    
+        if (getEGRIDResponseType.getEgridAndNumberAndIdentDN().size() == 0) {
+            log.warn("No egrid found at: " + postalcode + " / " + localisation);
+            return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        }
+    
+        return ResponseEntity.ok(getEGRIDResponseType);
+    }
+
+    
     // For both coordinate request methods (XY, GNSS), 
     // the request parameter must be two doubles, separated with a comma.
     private double[] validateCoordinateRequestParam(String coordinate) {

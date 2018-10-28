@@ -69,6 +69,8 @@ http://localhost:8888/oereb/getegrid/xml/?XY=2598098,1225627
 http://localhost:8888/oereb/getegrid/xml/?XY=2598097,1225805 (Liegenschaft und Baurecht)
 http://localhost:8888/oereb/getegrid/xml/?GNSS=7.4131,47.1819
 http://localhost:8888/oereb/getegrid/xml/SO0200002546/336
+http://localhost:8888/oereb/getegrid/xml/2540/Flughafenstrasse/95
+http://localhost:8888/oereb/getegrid/xml/2540/Flughafenstrasse
 
 http://localhost:8888/oereb/extract/reduced/xml/geometry/CH870672603279 (Flughafen Grenchen)
 http://localhost:8888/oereb/extract/reduced/xml/CH870672603279

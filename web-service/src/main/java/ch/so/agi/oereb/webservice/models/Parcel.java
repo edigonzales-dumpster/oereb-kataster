@@ -20,6 +20,8 @@ public class Parcel {
     private String municipality;
     
     private int municipalityCode;
+    
+    private String subunitOfLandRegister;
 
     public int getT_id() {
         return t_id;
@@ -99,6 +101,14 @@ public class Parcel {
 
     public void setMunicipalityCode(int municipalityCode) {
         this.municipalityCode = municipalityCode;
+    }
+
+    public String getSubunitOfLandRegister() {
+        return subunitOfLandRegister;
+    }
+
+    public void setSubunitOfLandRegister(String subunitOfLandRegister) {
+        this.subunitOfLandRegister = subunitOfLandRegister;
     }
 
 }

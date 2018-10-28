@@ -1,5 +1,6 @@
 package ch.so.agi.oereb.webservice.models;
 
+@Deprecated
 public class Egrid {
     private int t_id;
     
